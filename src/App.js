@@ -1,5 +1,5 @@
 import React from 'react';
-import GameMain from '@/pages/game/GameMain'
+import Main from '@/pages/main/Main'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 
 
@@ -10,7 +10,7 @@ const App = () => {
           <p>hello world</p>
           <BrowserRouter>
               <Routes>
-                  <Route path="/" element={<GameMain/>}></Route>
+                  <Route path="/" element={<Main/>}></Route>
               </Routes>
           </BrowserRouter>
       </div>

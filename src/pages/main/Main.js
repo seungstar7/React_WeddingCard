@@ -1,6 +1,6 @@
 import React from 'react'
 import {Navigate, useNavigate} from 'react-router'
-const GameMain = () => {
+const Main = () => {
 
     const navigate = useNavigate();
     const fnNavi = ( e ) => {
@@ -14,4 +14,4 @@ const GameMain = () => {
         </>
     )
 }
-export default GameMain;
+export default Main;
