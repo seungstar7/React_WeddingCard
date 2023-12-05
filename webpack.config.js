@@ -12,7 +12,7 @@ module.exports = (env) => {
         devtool: 'eval-source-map',
         output: {
             filename: '[name].js', // [name]은 entry에서 정의한 키 값 (index 또는 dev.property)
-            path: path.resolve(__dirname, 'build'),
+            path: path.resolve(__dirname, 'dist'),
         },
         module:{
             rules:[{
@@ -31,7 +31,10 @@ module.exports = (env) => {
             }]
         },
         devServer: {
+            host: 'localhost',
             port: 3000,
+            historyApiFallback: true,
+            open: true,
             static: {
                 directory: path.join(__dirname, 'public'),
             },
