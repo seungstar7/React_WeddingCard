@@ -1,0 +1,19 @@
+{
+  "name": "weddingcard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seungstar7/React_WeddingCard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seungstar7/React_WeddingCard/issues"
+  },
+  "homepage": "https://github.com/seungstar7/React_WeddingCard#readme"
+}
