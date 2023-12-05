@@ -8,11 +8,13 @@ const App = () => {
       <div className="App">
 
           <p>hello world</p>
-          <BrowserRouter>
-              <Routes>
-                  <Route path="/" element={<Main/>}></Route>
-              </Routes>
-          </BrowserRouter>
+          <Main/>
+          {/*todo : router 이슈 해결 후 url 주소 매핑 예정*/}
+          {/*<BrowserRouter>*/}
+          {/*    <Routes>*/}
+          {/*        <Route path="/" element={<Main/>}></Route>*/}
+          {/*    </Routes>*/}
+          {/*</BrowserRouter>*/}
       </div>
   );
 };

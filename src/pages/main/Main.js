@@ -1,10 +1,10 @@
 import React from 'react'
-import {Navigate, useNavigate} from 'react-router'
+// import {Navigate, useNavigate} from 'react-router'
 const Main = () => {
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const fnNavi = ( e ) => {
-        navigate(`/${e.target.name}` )
+        // navigate(`/${e.target.name}` )
 
     }
     return(
