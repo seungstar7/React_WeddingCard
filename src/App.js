@@ -5,9 +5,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom'
 
 const App = () => {
   return (
-      <div className="App">
-
-          <p>hello world</p>
+      <div className="app">
           <Main/>
           {/*todo : router 이슈 해결 후 url 주소 매핑 예정*/}
           {/*<BrowserRouter>*/}
