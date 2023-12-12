@@ -6,11 +6,11 @@ const CardMain = () =>{
     const [ imgSize, setImgSize ] = useState(10);
 
 
-    useEffect(()=>{
-        setTimeout(()=>{
-            if(imgSize<100)setImgSize(imgSize+1);
-        },1)
-    },[imgSize])
+    // useEffect(()=>{
+    //     setTimeout(()=>{
+    //         if(imgSize<100)setImgSize(imgSize+1);
+    //     },1)
+    // },[imgSize])
 
     return(
         <>
@@ -34,7 +34,7 @@ const CardMain = () =>{
                                     <div data-v-4de6baaa="" className="title">
                                         슈 퍼 텍 스 트
                                     </div>
-                                    <img data-v-4de6baaa="" src="/assets/images/img/main.e931123.jpg" width={imgSize+'%'} className="img"/>
+                                    <img data-v-4de6baaa="" src="/assets/images/img/main.e931123.jpg" width={'100%'} className="img"/>
                                         <div data-v-4de6baaa="" className="time">2028. 03. 18. SAT PM 1:00</div>
                                         <div data-v-4de6baaa="" className="location">누리시아웨딩홀 6층</div>
                                 </div>
