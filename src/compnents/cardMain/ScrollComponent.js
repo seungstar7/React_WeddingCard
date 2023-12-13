@@ -30,6 +30,10 @@ const ScrollComponent = () => {
 
     const ZoomInVar = batch(StickyIn(), FadeIn(), ZoomIn());
 
+    const btnHandler = () => {
+        window.alert("준비중입니다");
+    }
+
 
     return(
         <>
@@ -92,12 +96,16 @@ const ScrollComponent = () => {
                         </Animator>
                         <Animator animation={MoveIn(1000, 0)}>
                             <div style={{ marginTop: '2rem'}} className="button-list">
-                                <button className={"custom-btn btn-11"} style={
-                                    {width:'auto',
+                                <button
+                                    className={"custom-btn btn-11"}
+                                    style={{
+                                        width:'auto',
                                         height:'3rem',
                                         margin:'auto',
-                                        display:'block' }}>
-                                    show detail</button>
+                                        display:'block'
+                                }} onClick={btnHandler}>
+                                    show detail
+                                </button>
                             </div>
                         </Animator>
                     </Animator>
