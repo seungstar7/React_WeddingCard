@@ -53,26 +53,26 @@ const ScrollComponent = () => {
                 <ScrollPage/>
                 <ScrollPage>
                     <Animator animation={ZoomInVar}> /* Using Variable */
-                        <img data-v-4de6baaa="" src="/assets/images/scrollIMG/KakaoTalk_20231212_155500557_05.jpg" width={'100%'} className="img"/>
+                        <img data-v-4de6baaa="" src="./assets/images/scrollIMG/KakaoTalk_20231212_155500557_05.jpg" width={'100%'} className="img"/>
                     </Animator>
                 </ScrollPage>
                 <ScrollPage/>
                 {/*Page 2*/}
                 <ScrollPage>
                     <Animator animation={ZoomInVar}> /* Using Variable */
-                        <img data-v-4de6baaa="" src="/assets/images/scrollIMG/KakaoTalk_20231212_155431969_09.jpg" width={'100%'} className="img"/>
+                        <img data-v-4de6baaa="" src="./assets/images/scrollIMG/KakaoTalk_20231212_155431969_09.jpg" width={'100%'} className="img"/>
                     </Animator>
                 </ScrollPage>
                 <ScrollPage/>
                 <ScrollPage>
                     <Animator animation={ZoomInVar}> /* Using Variable */
-                        <img data-v-4de6baaa="" src="/assets/images/scrollIMG/KakaoTalk_20231212_155431969_12.jpg" width={'100%'} className="img"/>
+                        <img data-v-4de6baaa="" src="./assets/images/scrollIMG/KakaoTalk_20231212_155431969_12.jpg" width={'100%'} className="img"/>
                     </Animator>
                 </ScrollPage>
                 <ScrollPage/>
                 <ScrollPage>
                     <Animator animation={ZoomInVar}> /* Using Variable */
-                        <img data-v-4de6baaa="" src="/assets/images/scrollIMG/KakaoTalk_20231212_155431969_14.jpg" width={'100%'} className="img"/>
+                        <img data-v-4de6baaa="" src="./assets/images/scrollIMG/KakaoTalk_20231212_155431969_14.jpg" width={'100%'} className="img"/>
                     </Animator>
                 </ScrollPage>
                 <ScrollPage>
