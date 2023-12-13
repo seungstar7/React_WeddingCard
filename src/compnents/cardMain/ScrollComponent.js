@@ -28,7 +28,7 @@ const ScrollComponent = () => {
         console.log(new Date())
     },[])
 
-    const ZoomInVar = batch(StickyIn(), FadeIn(), ZoomIn());
+    const ZoomInVar = batch(Sticky(), Fade(), ZoomIn());
 
     const btnHandler = () => {
         window.alert("준비중입니다");
