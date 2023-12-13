@@ -37,7 +37,7 @@ function App() {
         <ScrollContainer>
             {/* Page 1 */}
             <ScrollPage>
-                <Animator animation={batch(Sticky(), ZoomIn())} >
+                <Animator animation={batch(Sticky(), Fade())}>
                     <h1 style={{textAlign:'center' }} ref={viewRef} >Wedding Day</h1>
                     <br/>
                     {/*<img data-v-4de6baaa="" src="/assets/images/img/main.e931123.jpg" width={'100%'} className="img"/>*/}
