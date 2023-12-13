@@ -30,7 +30,7 @@ module.exports = (env) => {
                     },
                 },
                 {
-                    test: /\.css$/,
+                    test: /\.scss|.css$/,
                     use: ['style-loader', 'css-loader'],
                 },
                 {
