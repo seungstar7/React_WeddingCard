@@ -1,13 +1,6 @@
 body {
   background: #ffe5dd;
 }
-h1 {
-  position: relative;
-  text-align: center;
-  color: #353535;
-  font-size: 50px;
-  font-family: "Cormorant Garamond", serif;
-}
 
 p {
   font-family: 'Lato', sans-serif;
