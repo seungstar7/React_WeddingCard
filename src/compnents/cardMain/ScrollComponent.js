@@ -80,15 +80,25 @@ const ScrollComponent = () => {
                 <ScrollPage>
                     <Animator animation={StickyIn()}>
                         <Animator animation={MoveIn(0, 1000)}>
-                            <h2>2024. 04. 06. SAT AM 11:00</h2>
+                            <h1 style={{textAlign:'center' }}>2024. 04. 06. SAT AM 11:00</h1>
                         </Animator>
                         <br />
                         <Animator animation={MoveIn(-1000, 0)}>
-                            <h2>김승현 ♡ 후쿠다리코</h2>
+                            <h1 style={{textAlign:'center' }}>김승현 ♡ 후쿠다리코</h1>
                         </Animator>
                         <br />
                         <Animator animation={MoveIn(1000, 0)}>
-                            <h2>베뉴지웨딩홀 B1 마리아 칼라스홀</h2>
+                            <h1 style={{textAlign:'center' }}>베뉴지웨딩홀 B1 마리아 칼라스홀</h1>
+                        </Animator>
+                        <Animator animation={MoveIn(1000, 0)}>
+                            <div style={{ marginTop: '2rem'}} className="button-list">
+                                <button className={"custom-btn btn-11"} style={
+                                    {width:'auto',
+                                        height:'3rem',
+                                        margin:'auto',
+                                        display:'block' }}>
+                                    show detail</button>
+                            </div>
                         </Animator>
                     </Animator>
                 </ScrollPage>
