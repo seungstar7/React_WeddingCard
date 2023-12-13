@@ -73,11 +73,6 @@ html a {
     cursor: pointer
 }
 
-html button {
-    background: 0 0;
-    border: none;
-    padding: 0
-}
 
 :focus {
     outline: 0;
@@ -1356,8 +1351,8 @@ html {
 .footer .madebykye[data-v-3c88c551] {
     font-size: 12px;
     padding: 10px 0 30px
-}</style>
-<style type="text/css">.__nuxt-error-page {
+}
+.__nuxt-error-page {
                           padding: 1rem;
                           background: #f7f8fb;
                           color: #47494e;
@@ -1404,12 +1399,12 @@ html {
     position: fixed;
     left: 12px;
     bottom: 12px
-}</style>
-<style type="text/css">.GMap__Wrapper {
+}
+.GMap__Wrapper {
                           width: 100%;
                           height: 400px
                       }</style>
-<style id="vuescroll-silde-mode-style" type="text/css">
+
 @-webkit-keyframes loading-rotate {
     to {
         -webkit-transform: rotate(1turn);
@@ -1514,8 +1509,8 @@ html {
     -webkit-animation: loading-wipe 1.5s ease-in-out infinite;
     animation: loading-wipe 1.5s ease-in-out infinite;
 }
-</style>
-<style type="text/css">.toasted {
+
+.toasted {
                           padding: 0 20px
                       }
 
@@ -1830,8 +1825,8 @@ html {
     .toasted-container .toasted {
         border-radius: 0
     }
-}</style>
-<style type="text/css">.audio[data-v-38c19930] {
+}
+.audio[data-v-38c19930] {
                           right: 15px;
                           top: 15px;
                           position: fixed;
@@ -1855,8 +1850,8 @@ html {
     color: var(--text-default);
     opacity: 1;
     transition: opacity .3s linear
-}</style>
-<style type="text/css">.thankyou[data-v-433bd9d5] {
+}
+.thankyou[data-v-433bd9d5] {
                           background-color: var(--background-light);
                           text-align: center
                       }
@@ -1906,8 +1901,8 @@ html {
 
 .thankyou .wedding .time[data-v-433bd9d5] {
     margin-bottom: 5px
-}</style>
-<style type="text/css">.international-contact-wrapper[data-v-1a66bcc0] {
+}
+.international-contact-wrapper[data-v-1a66bcc0] {
                           padding: 20px 20px 0;
                           height: 100%;
                           display: flex;
@@ -1983,8 +1978,8 @@ html {
     text-align: center;
     cursor: pointer;
     width: 100%
-}</style>
-<style type="text/css">.main[data-v-6a4481fa] {
+}
+.main[data-v-6a4481fa] {
                           text-align: center;
                           color: var(--emphasize);
                           font-size: 20px;
@@ -2045,8 +2040,8 @@ html {
 .main .location[data-v-6a4481fa] {
     font-size: 15px;
     padding-bottom: 10%
-}</style>
-<style type="text/css">.main[data-v-a79540d2] {
+}
+.main[data-v-a79540d2] {
                           text-align: center;
                           color: var(--emphasize);
                           font-size: 20px;
@@ -2123,8 +2118,8 @@ html {
     font-size: 15px;
     padding-bottom: 10%;
     font-weight: 100
-}</style>
-<style type="text/css">:root {
+}
+:root {
                           --border-light: #efe2ce;
                           --background-light: #fdf5dd;
                           --emphasize: #a06834;
@@ -2136,8 +2131,8 @@ html {
                           --text-light: #fff;
                           --calendar-today: #a06834;
                           --calendar-today-text: #fff
-                      }</style>
-<style type="text/css">.vgs {
+                      }
+.vgs {
                           transition: opacity .2s ease;
                           position: fixed;
                           z-index: 9998;
