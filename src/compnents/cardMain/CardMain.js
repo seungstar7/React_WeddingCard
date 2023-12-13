@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
-import "/assets/css/style.css";
-import "/assets/css/public.css";
+
 const CardMain = () =>{
 
     const [ imgSize, setImgSize ] = useState(10);
