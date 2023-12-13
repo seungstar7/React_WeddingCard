@@ -1,6 +1,13 @@
 body {
   background: #ffe5dd;
+  -ms-overflow-style: none;
 }
+
+::-webkit-scrollbar {
+  display: none;
+
+}
+
 
 p {
   font-family: 'Lato', sans-serif;
