@@ -52,49 +52,43 @@ const ScrollComponent = () => {
                 </ScrollPage>
                 <ScrollPage/>
                 <ScrollPage>
-                    <Animator animation={ZoomInVar}> /* Using Variable */
+                    <Animator animation={ZoomInVar}> 
                         <img data-v-4de6baaa="" src="./assets/images/scrollIMG/KakaoTalk_20231212_155500557_05.jpg" width={'100%'} className="img"/>
                     </Animator>
                 </ScrollPage>
                 <ScrollPage/>
                 {/*Page 2*/}
                 <ScrollPage>
-                    <Animator animation={ZoomInVar}> /* Using Variable */
+                    <Animator animation={ZoomInVar}>
                         <img data-v-4de6baaa="" src="./assets/images/scrollIMG/KakaoTalk_20231212_155431969_09.jpg" width={'100%'} className="img"/>
                     </Animator>
                 </ScrollPage>
                 <ScrollPage/>
                 <ScrollPage>
-                    <Animator animation={ZoomInVar}> /* Using Variable */
+                    <Animator animation={ZoomInVar}>
                         <img data-v-4de6baaa="" src="./assets/images/scrollIMG/KakaoTalk_20231212_155431969_12.jpg" width={'100%'} className="img"/>
                     </Animator>
                 </ScrollPage>
                 <ScrollPage/>
                 <ScrollPage>
-                    <Animator animation={ZoomInVar}> /* Using Variable */
+                    <Animator animation={ZoomInVar}> 
                         <img data-v-4de6baaa="" src="./assets/images/scrollIMG/KakaoTalk_20231212_155431969_14.jpg" width={'100%'} className="img"/>
                     </Animator>
                 </ScrollPage>
-                <ScrollPage>
-                    <Animator animation={ZoomInVar}> /* Using Variable */
-
-                        <h2>Introducing the react-motion-scroll dependency 🌟</h2>
-                        <h3> Wooo - hoooo </h3>
-                    </Animator>
-                </ScrollPage>
+                <ScrollPage/>
                 {/* Page 3*/}
                 <ScrollPage>
                     <Animator animation={StickyIn()}>
                         <Animator animation={MoveIn(0, 1000)}>
-                            <h2>This is awesome 🤩</h2>
+                            <h2>2024. 04. 06. SAT AM 11:00</h2>
                         </Animator>
                         <br />
                         <Animator animation={MoveIn(-1000, 0)}>
-                            <h2>Left Slide</h2>
+                            <h2>김승현 ♡ 후쿠다리코</h2>
                         </Animator>
                         <br />
                         <Animator animation={MoveIn(1000, 0)}>
-                            <h2>Right Slide</h2>
+                            <h2>베뉴지웨딩홀 B1 마리아 칼라스홀</h2>
                         </Animator>
                     </Animator>
                 </ScrollPage>
