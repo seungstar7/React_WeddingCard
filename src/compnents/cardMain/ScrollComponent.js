@@ -4,15 +4,17 @@ import {
     batch,
     Fade,
     FadeIn,
-    MoveIn,
+    MoveIn, MoveOut,
     ScrollContainer,
     ScrollPage,
     Sticky,
     StickyIn,
     ZoomIn
 } from 'react-scroll-motion'
+import {useNavigate} from 'react-router'
 
 const ScrollComponent = () => {
+    const navigation = useNavigate();
     const [ weddingDate, setWeddingDate ] = useState(0);
     const viewRef = useRef();
     useEffect(()=>{
@@ -31,7 +33,8 @@ const ScrollComponent = () => {
     const ZoomInVar = batch(Sticky(), Fade(), ZoomIn());
 
     const btnHandler = () => {
-        window.alert("준비중입니다");
+        navigation('/main')
+        // window.alert("준비중입니다");
     }
 
 
@@ -56,14 +59,14 @@ const ScrollComponent = () => {
                 </ScrollPage>
                 <ScrollPage/>
                 <ScrollPage>
-                    <Animator animation={ZoomInVar}> 
-                        <img data-v-4de6baaa="" src="./assets/images/scrollIMG/KakaoTalk_20231212_155500557_05.jpg" width={'100%'} className="img"/>
+                    <Animator animation={batch(Sticky(), Fade(), ZoomIn(),MoveOut(1000,0))}>
+                        <img src="./assets/images/scrollIMG/KakaoTalk_20231212_155500557_05.jpg" width={'100%'} className="img"/>
                     </Animator>
                 </ScrollPage>
                 <ScrollPage/>
                 {/*Page 2*/}
                 <ScrollPage>
-                    <Animator animation={ZoomInVar}>
+                    <Animator animation={batch(Sticky(), Fade(), ZoomIn(),MoveOut(-1000,0))}>
                         <img data-v-4de6baaa="" src="./assets/images/scrollIMG/KakaoTalk_20231212_155431969_09.jpg" width={'100%'} className="img"/>
                     </Animator>
                 </ScrollPage>
@@ -111,7 +114,6 @@ const ScrollComponent = () => {
                     </Animator>
                 </ScrollPage>
             </ScrollContainer>
-
         </>
     )
 
