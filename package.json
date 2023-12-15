@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/seungstar7/React_WeddingCard/issues"
   },
-  "homepage": "https://github.com/seungstar7/React_WeddingCard#readme",
+  "homepage": "https://github.com/seungstar7/React_WeddingCard",
   "dependencies": {
     "@babel/cli": "^7.23.4",
     "@babel/core": "^7.23.5",
