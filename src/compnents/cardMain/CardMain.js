@@ -41,9 +41,9 @@ const CardMain = () =>{
                             {/*메인 헤더영역 끝*/}
                             {/*소개 영역 시작*/}
                             <div data-v-2795477a="" data-v-227354f0="" className="message">
-                                <img data-v-2795477a="" src="/assets/images/img/rose.6092fbd.png" className="rose-img"/>
-                                <img data-v-2795477a="" src="/assets/images/img/rose-gold.53d3800.png" className="rose-img-gold"/>
-                                <img data-v-2795477a="" src="/assets/images/img/rose.6092fbd.png" className="rose-img-bottom"/>
+                                <img data-v-2795477a="" src="./assets/images/img/rose.6092fbd.png" className="rose-img"/>
+                                <img data-v-2795477a="" src="./assets/images/img/rose-gold.53d3800.png" className="rose-img-gold"/>
+                                <img data-v-2795477a="" src="./assets/images/img/rose.6092fbd.png" className="rose-img-bottom"/>
                                     <div data-v-2795477a="" className="text">
                                         <div data-v-2795477a="" className="title">초대합니다</div>
                                         <div data-v-2795477a="" className="content">
