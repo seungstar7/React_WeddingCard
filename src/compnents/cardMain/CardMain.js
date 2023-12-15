@@ -66,7 +66,7 @@ const CardMain = () =>{
                                     <div data-v-dcbd09b2="" data-v-4752b0dc="" className="groom-and-bride">
                                         <div data-v-dcbd09b2="" className="title-wrapper">
                                             <div data-v-dcbd09b2="" className="title">신랑</div>
-                                            <div data-v-dcbd09b2="">강도현</div>
+                                            <div data-v-dcbd09b2="">김승현</div>
                                         </div>
                                         <div data-v-dcbd09b2="" className="icons">
                                             <a data-v-dcbd09b2="" href="tel:010-1234-1234">
@@ -95,7 +95,7 @@ const CardMain = () =>{
                                             <div data-v-dcbd09b2="" className="title">
                                                 신부
                                             </div>
-                                            <div data-v-dcbd09b2="">이수진</div>
+                                            <div data-v-dcbd09b2="">김샛별</div>
                                         </div>
                                         <div data-v-dcbd09b2="" className="icons"><a data-v-dcbd09b2=""
                                                                                      href="tel:010-1234-1234">

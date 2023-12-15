@@ -11,10 +11,10 @@ import {
     StickyIn,
     ZoomIn
 } from 'react-scroll-motion'
-import {useNavigate} from 'react-router'
+// import {useNavigate} from 'react-router'
 
-const ScrollComponent = () => {
-    const navigation = useNavigate();
+const ScrollComponent = ({ menuDef }) => {
+    // const navigation = useNavigate();
     const [ weddingDate, setWeddingDate ] = useState(0);
     const viewRef = useRef();
     useEffect(()=>{
@@ -33,7 +33,8 @@ const ScrollComponent = () => {
     const ZoomInVar = batch(Sticky(), Fade(), ZoomIn());
 
     const btnHandler = () => {
-        navigation('/main')
+        // navigation('/main')
+        menuDef('main')
         // window.alert("준비중입니다");
     }
 
