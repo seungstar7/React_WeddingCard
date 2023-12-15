@@ -10,13 +10,16 @@ function App() {
     const menuDef = ( menuType ) => {
         setMenu(menuType);
     }
+    useEffect(()=>{
+        console.log(window.location.href)
+    },[])
 
     return (
         <>
             {/*{menu == 'intro' && <ScrollComponent menuDef={menuDef}/>}*/}
             {/*{menu == 'main' && <CardMain/>}*/}
 
-            <BrowserRouter basename={process.env.PUBLIC_URL}>
+            <BrowserRouter basename={window.location.href}>
                 <Routes>
                     <Route path="/" element={<ScrollComponent/>} ></Route>
                     <Route path="/main" element={<CardMain/>} ></Route>
