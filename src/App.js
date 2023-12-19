@@ -4,17 +4,17 @@ import "/assets/css/public.css";
 import "/assets/css/button.css";
 import ScrollComponent from '@/compnents/cardMain/ScrollComponent'
 import CardMain from '@/compnents/cardMain/CardMain'
+import Layout from '@/pages/layout/Layout'
 // import {BrowserRouter, Route, Routes} from 'react-router-dom'
 function App() {
-    const [ menu , setMenu ] = useState('intro');
+    const [ menu , setMenu ] = useState('main');
     const menuDef = ( menuType ) => {
         setMenu(menuType);
     }
 
     return (
         <>
-            {menu == 'intro' && <ScrollComponent menuDef={menuDef}/>}
-            {menu == 'main' && <CardMain/>}
+            <Layout childProps={menu == 'intro' ? <ScrollComponent menuDef={menuDef}/> : <CardMain/>}/>
 
             {/*<BrowserRouter>*/}
             {/*    <Routes>*/}
