@@ -79,6 +79,7 @@ html a {
     outline-width: 0
 }
 
+
 .kakao-wrap {
     color: #000;
     position: absolute;
@@ -908,6 +909,10 @@ html {
     border-radius: 3px;
     -o-object-fit: cover;
     object-fit: cover
+}
+
+.gallery .img-list .image[data-v-e42bfae6]:hover{
+    background: #3b8070;
 }
 
 .story[data-v-65bbcfaa] {

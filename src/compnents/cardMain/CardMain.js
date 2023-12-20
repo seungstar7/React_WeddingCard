@@ -15,7 +15,7 @@ const CardMain = () =>{
 
     return(
         <>
-            <Header/>
+            <Header/>s
             <Content/>
         </>
     )

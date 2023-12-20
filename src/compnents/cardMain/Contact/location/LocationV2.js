@@ -5,7 +5,7 @@ const LocationV2 = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isError, setIsError] = useState(false)
     const [roadViewIsOpen, setRoadViewIsOpen ] = useState(false);
-    const [pan, setPan] = useState(0)
+    const [pan, setPan] = useState(80)
     const [center, setCenter] = useState({
         lat: 37.56017552857142,
         lng: 126.83929504825824

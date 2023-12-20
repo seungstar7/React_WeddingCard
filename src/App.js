@@ -14,7 +14,9 @@ function App() {
 
     return (
         <>
+
             <Layout childProps={menu == 'intro' ? <ScrollComponent menuDef={menuDef}/> : <CardMain/>}/>
+
 
             {/*<BrowserRouter>*/}
             {/*    <Routes>*/}
