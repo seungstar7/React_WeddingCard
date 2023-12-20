@@ -3,13 +3,28 @@ import React, {useEffect, useState} from 'react'
 
 const LocationV2 = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isError, setIsError] = useState(false)
     const [roadViewIsOpen, setRoadViewIsOpen ] = useState(false);
-    const [latLng, setLatlng ] = useState({});
+    const [pan, setPan] = useState(0)
+    const [center, setCenter] = useState({
+        lat: 37.56017552857142,
+        lng: 126.83929504825824
+    })
+    const [roadViewCenter, setRoadViewCenter ] = useState({
+        lat: 37.56017552857142,
+        lng: 126.83929504825824})
     const [mapTypeId, setMapTypeId] = useState()
 
-    useEffect(()=>{
-        setLatlng({ lat: 37.56017552857142, lng: 126.83929504825824 })
-    },[])
+    const getAngleClassName = (angle) => {
+        const threshold = 22.5 //이미지가 변화되어야 되는(각도가 변해야되는) 임계 값
+        for (let i = 0; i < 16; i++) {
+            //각도에 따라 변화되는 앵글 이미지의 수가 16개
+            if (angle > threshold * i && angle < threshold * (i + 1)) {
+                //각도(pan)에 따라 아이콘의 class명을 변경
+                return "m" + i
+            }
+        }
+    }
 
     return (
         <div data-v-f68ce4e0="" data-v-227354f0="" className="map">
@@ -20,8 +35,7 @@ const LocationV2 = () => {
                 <Roadview // 로드뷰를 표시할 Container
                     position={{
                         // 지도의 중심좌표
-                        lat: 37.56017552857142,
-                        lng: 126.83929504825824,
+                        ...roadViewCenter,
                         radius: 50,
                     }}
                     style={{
@@ -29,6 +43,15 @@ const LocationV2 = () => {
                         width: "100%",
                         height: "450px",
                     }}
+                    pan={pan}
+                    onViewpointChange={(roadview) => setPan(roadview.getViewpoint().pan)}
+                    onPositionChanged={(roadview) =>
+                        setRoadViewCenter({
+                            lat: roadview.getPosition().getLat(),
+                            lng: roadview.getPosition().getLng(),
+                        })
+                    }
+                    onErrorGetNearestPanoId={() => setIsError(true)}
                 />
 
             }
@@ -36,10 +59,7 @@ const LocationV2 = () => {
             {/*<RemovableCustomOverlayStyle />*/}
             <Map // 지도를 표시할 Container
                 id={`map`}
-                center={{
-                    // 지도의 중심좌표
-                    lat: 37.56017552857142, lng: 126.83929504825824
-                }}
+                center={center}
                 style={{
                     // 지도의 크기
                     width: "100%",
@@ -48,9 +68,33 @@ const LocationV2 = () => {
                 level={3} // 지도의 확대 레벨
             >
                 {mapTypeId && <MapTypeId type={mapTypeId}/>}
-                <MapMarker position={{lat: 37.56017552857142, lng: 126.83929504825824 }} onClick={() => setIsOpen(true)} />
+                <MapMarker position={center} onClick={() => setIsOpen(true)} />
+                {roadViewIsOpen &&
+                    <MapMarker
+                        position={roadViewCenter}
+                        draggable={true}
+                        onDragEnd={(marker) => {
+                            setRoadViewCenter({
+                                // @ts-ignore
+                                lat: marker.getPosition().getLat(),
+                                // @ts-ignore
+                                lng: marker.getPosition().getLng(),
+                            })
+                            setIsError(false)
+                        }}
+                        image={{
+                            src: "https://t1.daumcdn.net/localimg/localimages/07/2018/pc/roadview_minimap_wk_2018.png",
+                            size: { width: 26, height: 46 },
+                            options: {
+                                spriteSize: { width: 1666, height: 168 },
+                                spriteOrigin: { x: 705, y: 114 },
+                                offset: { x: 13, y: 46 },
+                            },
+                        }}
+                    />
+                }
                 {isOpen && (
-                    <CustomOverlayMap position={{lat: 37.56017552857142, lng: 126.83929504825824 }}>
+                    <CustomOverlayMap position={center}>
                         <div className="kakao-wrap">
                             <div className="info">
                                 <div className="title">
@@ -117,7 +161,7 @@ const LocationV2 = () => {
                 새로고침
             </button>
             <button
-                onClick={() => {setRoadViewIsOpen(!roadViewIsOpen);}}
+                onClick={() => {setRoadViewIsOpen(!roadViewIsOpen);setMapTypeId(roadViewIsOpen ? null : kakao.maps.MapTypeId.ROADVIEW );}}
             >
                 로드뷰 {!roadViewIsOpen ? '보기' : '닫기'}
             </button>
