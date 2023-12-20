@@ -15,7 +15,7 @@ const GroomParentContact = () => {
                         </div>
                         <div data-v-39c2c16b="" className="contact">
                             <div data-v-39c2c16b="" className="icons">
-                                <img src="./assets/images/img/free-icon-chrysanthemum-6080563.png" style={{width:'20px',height:'20px',cursor:'pointer'}} onClick={()=>window.alert("애도해 주셔서 감사합니다")}/>
+                                <img src="./assets/images/img/free-icon-chrysanthemum-4134000.png" style={{width:'20px',height:'20px',cursor:'pointer'}} onClick={()=>window.alert("애도 해 주셔서 감사합니다")}/>
                                 {/*<a data-v-39c2c16b="" href="tel:010-1234-1234">*/}
 
                                 {/*    <svg data-v-39c2c16b="" aria-hidden="true" focusable="false"*/}
