@@ -25,7 +25,7 @@ const ChildContact = () => {
                 <div data-v-dcbd09b2="" data-v-4752b0dc="" className="groom-and-bride">
                     <div data-v-dcbd09b2="" className="title-wrapper">
                         <div data-v-dcbd09b2="" className="title">신부</div>
-                        <div data-v-dcbd09b2="">김샛별</div>
+                        <div data-v-dcbd09b2="">리&nbsp;&nbsp;코</div>
                     </div>
                     <div data-v-dcbd09b2="" className="icons">
                         <a data-v-dcbd09b2="" href="tel:+82 10-6595-0034">
