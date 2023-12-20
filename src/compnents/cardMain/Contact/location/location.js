@@ -12,24 +12,31 @@ const Location = () => {
         }
         const map = new kakao.maps.Map(container,options);
         let marker = new kakao.maps.Marker({
+            map: map,
             position: markerPosition,
         });
-      //   const content = `
-      // <div class="customoverlay">
-      //   <span>포썸</span>
-      // </div>`;
-      //   new kakao.maps.CustomOverlay({
-      //       map,
-      //       markerPosition,
-      //       content
-      //   });
+        const content = `
+      <div class="customoverlay">
+        <span>포썸</span>
+      </div>`;
+        let overlay = new kakao.maps.CustomOverlay({
+            content: content,
+            map: map,
+            position: marker.getPosition()
+        });
+        console.log(marker.getPosition())
+        console.log(overlay)
+        overlay.setMap(map);
         marker.setMap(map);
         setMapState(map);
-        // container.addEventListener('click',(mouseEvent)=>{
-        //     let latlng = mouseEvent;
-        //     console.log(latlng)
-        //     alert("!@#!@#!@#")
-        // })
+
+        console.log(map)
+
+        container.addEventListener('click',(mouseEvent)=>{
+            let latlng = mouseEvent;
+            console.log(latlng)
+            alert("!@#!@#!@#")
+        })
         // map.addOverlayMapTypeId(kakao.maps.MapTypeId.ROADVIEW);
     },[])
 
