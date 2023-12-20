@@ -4,7 +4,7 @@ const Location = () => {
     useEffect(()=>{
         const container = document.getElementById("map");
         const options = {
-            center: new kakao.maps.LatLng(33.450701,176.570667),
+            center: new kakao.maps.LatLng(33.450701, 126.570667),
             level:3
         }
         const map = new kakao.maps.Map(container,options);
@@ -13,8 +13,12 @@ const Location = () => {
     return (
         <>
             <p>로케이션 영역</p>
-            <div id={"map"} style={{width:'500px',height:'500px'}}></div>
-
+            <div data-v-f68ce4e0="" data-v-227354f0="" className="map">
+                <div data-v-f68ce4e0="" className="title">
+                    오시는 길
+                </div>
+                <div id={"map"} style={{width:' 360px',height:'270px'}}></div>
+            </div>
         </>
     )
 }

@@ -10,12 +10,12 @@ const Content = () => {
 
     return(
         <>
-            <Intro/>
-            <Contact/>
-            <Gallery/>
+            {/*<Intro/>*/}
+            {/*<Contact/>*/}
+            {/*<Gallery/>*/}
             <Location/>
-            <Insa/>
-            <Calendar/>
+            {/*<Insa/>*/}
+            {/*<Calendar/>*/}
         </>
     )
 }
