@@ -913,6 +913,7 @@ html {
 
 .gallery .img-list .image[data-v-e42bfae6]:hover{
     background: #3b8070;
+    opacity: 0.5;
 }
 
 .story[data-v-65bbcfaa] {
