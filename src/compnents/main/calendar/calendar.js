@@ -1,35 +1,36 @@
 import React from 'react'
+import {useTranslation} from 'react-i18next'
 
 const Calendar = () => {
+    const { t, i18n } = useTranslation(["menu"]);
     return(
         <>
-            <p>캘린더 영역</p>
             <div data-v-21469558="" data-v-227354f0="" className="calendar">
                 <div data-v-21469558="" className="title">
-                    <div data-v-21469558="" className="year">2024년</div>
-                    <div data-v-21469558="" className="month">4월</div>
+                    <div data-v-21469558="" className="year">2024　</div>
+                    <div data-v-21469558="" className="month">4{t('월')}</div>
                 </div>
                 <div data-v-21469558="" className="wrap">
                     <div data-v-21469558="" className="weekday">
-                        일
+                        {t('일')}
                     </div>
                     <div data-v-21469558="" className="weekday">
-                        월
+                        {t('월')}
                     </div>
                     <div data-v-21469558="" className="weekday">
-                        화
+                        {t('화')}
                     </div>
                     <div data-v-21469558="" className="weekday">
-                        수
+                        {t('수')}
                     </div>
                     <div data-v-21469558="" className="weekday">
-                        목
+                        {t('목')}
                     </div>
                     <div data-v-21469558="" className="weekday">
-                        금
+                        {t('금')}
                     </div>
                     <div data-v-21469558="" className="weekday">
-                        토
+                        {t('토')}
                     </div>
                     <div data-v-21469558="" className="day"></div>
                     <div data-v-21469558="" className="day">

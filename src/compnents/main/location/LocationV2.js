@@ -1,7 +1,9 @@
 import {CustomOverlayMap, Map, MapMarker, MapTypeId, Roadview} from 'react-kakao-maps-sdk'
 import React, {useEffect, useState} from 'react'
+import {useTranslation} from 'react-i18next'
 
 const LocationV2 = () => {
+    const { t, i18n } = useTranslation(["menu"]);
     const [isOpen, setIsOpen] = useState(false);
     const [isError, setIsError] = useState(false)
     const [roadViewIsOpen, setRoadViewIsOpen ] = useState(false);
@@ -29,7 +31,7 @@ const LocationV2 = () => {
     return (
         <div data-v-f68ce4e0="" data-v-227354f0="" className="map">
             <div data-v-f68ce4e0="" className="title">
-                오시는 길
+                {t("오시는 길")}
             </div>
             {roadViewIsOpen &&
                 <Roadview // 로드뷰를 표시할 Container
@@ -144,26 +146,28 @@ const LocationV2 = () => {
                     setMapTypeId(kakao.maps.MapTypeId.TRAFFIC)
                 }}
             >
-                교통정보 보기
+                {t("교통정보")} {t("보기")}
+
             </button>
-            <button
-                onClick={() => {
-                    setMapTypeId(kakao.maps.MapTypeId.ROADVIEW)
-                }}
-            >
-                로드뷰 도로정보 보기
-            </button>
-            <button
-                onClick={() => {
-                    setMapTypeId(null);
-                }}
-            >
-                새로고침
-            </button>
+            {/*<button*/}
+            {/*    onClick={() => {*/}
+            {/*        setMapTypeId(kakao.maps.MapTypeId.ROADVIEW)*/}
+            {/*    }}*/}
+            {/*>*/}
+            {/*    로드뷰 도로정보 보기*/}
+            {/*</button>*/}
+            {/*<button*/}
+            {/*    onClick={() => {*/}
+            {/*        setMapTypeId(null);*/}
+            {/*    }}*/}
+            {/*>*/}
+            {/*    새로고침*/}
+            {/*</button>*/}
             <button
                 onClick={() => {setRoadViewIsOpen(!roadViewIsOpen);setMapTypeId(roadViewIsOpen ? null : kakao.maps.MapTypeId.ROADVIEW );}}
             >
-                로드뷰 {!roadViewIsOpen ? '보기' : '닫기'}
+                {t("로드뷰")}
+                {!roadViewIsOpen ? t("보기") : t("닫기")}
             </button>
         </div>
     )
