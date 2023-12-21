@@ -1,0 +1,8 @@
+{
+  "RECEPTION":"접수",
+  "TREATMENT":"진료",
+  "RESERVATION":"예약",
+  "PATIENT":"환자 정보",
+  "SYSTEM MANAGEMENT":"시스템 관리",
+  "SETTLEMENT":"정산"
+}

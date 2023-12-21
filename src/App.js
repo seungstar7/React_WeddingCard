@@ -7,10 +7,13 @@ import Main from '@/pages/main/Main'
 import Intro from '@/pages/intro/Intro'
 import {MenuContext} from '@/compnents/common/MenuContext'
 import {I18nContext} from '@/compnents/common/I18nContext'
+import "./i18n/index"
+import {useTranslation} from 'react-i18next'
 
 // import {BrowserRouter, Route, Routes} from 'react-router-dom'
 function App() {
-    const [ menu , setMenu ] = useState('intro');
+    const [ menu , setMenu ] = useState('main');
+    const { t, i18n } = useTranslation(["menu"]);
     const changeMenu = useCallback(
         (menu) => {
             setMenu(menu);
@@ -33,6 +36,19 @@ function App() {
     useEffect(() => {
         console.log('현재 언어:', locale);
     }, [locale]);
+
+    useEffect(()=>{
+        let userBrowserLang = navigator.language;
+        console.log(userBrowserLang)
+        if(userBrowserLang=="ja"){
+            let result = changeLang;
+            console.log(result())
+        }
+    },[])
+    const changeLang = async () => {
+        await i18n.changeLanguage('ja');
+        return true
+    }
     // const menuDef = ( menuType ) => {
     //     setMenu(menuType);
     // }
