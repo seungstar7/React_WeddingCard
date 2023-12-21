@@ -1,6 +1,6 @@
 import React from 'react'
-import ChildContact from '@/compnents/cardMain/Contact/childComponents/ChildContact'
-import ParentContact from '@/compnents/cardMain/Contact/childComponents/ParentContact'
+import ChildContact from '@/compnents/main/Contact/childComponents/ChildContact'
+import ParentContact from '@/compnents/main/Contact/childComponents/ParentContact'
 
 const Contact = () => {
     return (

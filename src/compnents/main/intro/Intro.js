@@ -9,7 +9,7 @@ const Intro = () => {
                 <img data-v-2795477a="" src="./assets/images/img/rose-gold.53d3800.png" className="rose-img-gold"/>
                 <img data-v-2795477a="" src="./assets/images/img/rose.6092fbd.png" className="rose-img-bottom"/>
                 <div data-v-2795477a="" className="text">
-                    <div data-v-2795477a="" className="title">초대합니다</div>
+                    <div data-v-2795477a="" className="title" style={{textAlign:'center'}}>초대합니다</div>
                     <div data-v-2795477a="" className="content" style={{textAlign:'center'}}>
                         곁에 있을 때 가장<br/>
                         나다운 모습이 되게 하는 한 사람<br/>

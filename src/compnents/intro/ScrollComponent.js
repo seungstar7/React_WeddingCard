@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react'
+import React, {useContext, useEffect, useMemo, useRef, useState} from 'react'
 import {
     Animator,
     batch,
@@ -11,12 +11,16 @@ import {
     StickyIn,
     ZoomIn
 } from 'react-scroll-motion'
+import {MenuContext} from '@/compnents/common/MenuContext'
+import {I18nContext} from '@/compnents/common/I18nContext'
 // import {useNavigate} from 'react-router'
 
 const ScrollComponent = ({ menuDef }) => {
     // const navigation = useNavigate();
     const [ weddingDate, setWeddingDate ] = useState(0);
     const viewRef = useRef();
+    const { menu , changeMenu } = useContext(MenuContext);
+
     useEffect(()=>{
         viewRef.current
         const today = new Date();
@@ -33,14 +37,13 @@ const ScrollComponent = ({ menuDef }) => {
     const ZoomInVar = batch(Sticky(), Fade(), ZoomIn());
 
     const btnHandler = () => {
+        changeMenu('main');
         // navigation('/main')
-        menuDef('main')
-        // window.alert("준비중입니다");
     }
-
 
     return(
         <>
+
             <ScrollContainer>
                 {/* Page 1 */}
                 <ScrollPage>
@@ -48,7 +51,7 @@ const ScrollComponent = ({ menuDef }) => {
                         <h1 style={{textAlign:'center' }} ref={viewRef} >Wedding Day</h1>
                         <br/>
                         {/*<img data-v-4de6baaa="" src="/assets/images/img/main.e931123.jpg" width={'100%'} className="img"/>*/}
-                        {/*<CardMain/>*/}
+                        {/*<main/>*/}
                         {/*<div data-v-4de6baaa="" className="time">2028. 03. 18. SAT PM 1:00</div>*/}
                         {/*<div data-v-4de6baaa="" className="location">누리시아웨딩홀 6층</div>*/}
                     </Animator>
@@ -79,7 +82,7 @@ const ScrollComponent = ({ menuDef }) => {
                 </ScrollPage>
                 <ScrollPage/>
                 <ScrollPage>
-                    <Animator animation={ZoomInVar}> 
+                    <Animator animation={ZoomInVar}>
                         <img data-v-4de6baaa="" src="./assets/images/scrollIMG/KakaoTalk_20231212_155431969_14.jpg" width={'100%'} className="img"/>
                     </Animator>
                 </ScrollPage>

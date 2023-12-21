@@ -1,32 +1,78 @@
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {createContext, useCallback, useContext, useEffect, useMemo, useRef, useState} from 'react';
 import "/assets/css/style.css";
 import "/assets/css/public.css";
 import "/assets/css/button.css";
-import ScrollComponent from '@/compnents/cardMain/ScrollComponent'
-import CardMain from '@/compnents/cardMain/CardMain'
 import Layout from '@/pages/layout/Layout'
+import Main from '@/pages/main/Main'
+import Intro from '@/pages/intro/Intro'
+import {MenuContext} from '@/compnents/common/MenuContext'
+import {I18nContext} from '@/compnents/common/I18nContext'
+
 // import {BrowserRouter, Route, Routes} from 'react-router-dom'
 function App() {
-    const [ menu , setMenu ] = useState('main');
-    const menuDef = ( menuType ) => {
-        setMenu(menuType);
-    }
+    const [ menu , setMenu ] = useState('intro');
+    const changeMenu = useCallback(
+        (menu) => {
+            setMenu(menu);
+        },
+        [setMenu]
+    );
 
+    const [locale, setLocale] = useState('en');
+    const changeLocale = useCallback(
+        (locale) => {
+            setLocale(locale);
+        },
+        [setLocale]
+    );
+    // 콘솔에 현재 언어 출력
+
+    useEffect(()=>{
+        console.log(menu)
+    },[menu])
+    useEffect(() => {
+        console.log('현재 언어:', locale);
+    }, [locale]);
+    // const menuDef = ( menuType ) => {
+    //     setMenu(menuType);
+    // }
     return (
         <>
 
-            <Layout childProps={menu == 'intro' ? <ScrollComponent menuDef={menuDef}/> : <CardMain/>}/>
 
 
+        <MenuContext.Provider value={{menu, changeMenu}}>
+            <I18nContext.Provider value={{ locale, changeLocale }}>
+            <Layout childProps={menu == 'intro' ? <Intro/> : <Main/>}/>
+                {/*<LanguageButton />*/}
+            </I18nContext.Provider>
+        </MenuContext.Provider>
             {/*<BrowserRouter>*/}
             {/*    <Routes>*/}
             {/*        <Route path="/" element={<ScrollComponent/>} ></Route>*/}
-            {/*        <Route path="/main" element={<CardMain/>} ></Route>*/}
+            {/*        <Route path="/main" element={<main/>} ></Route>*/}
             {/*    </Routes>*/}
             {/*</BrowserRouter>*/}
             {/*<ScrollComponent/>*/}
-            {/*<CardMain/>*/}
+            {/*<main/>*/}
         </>
     );
 }
+
+const LanguageButton = () => {
+    // useContext를 사용하여 I18nContext의 값을 가져옴
+    const { locale, changeLocale } = useContext(I18nContext);
+
+    // 콘솔에 현재 언어 출력
+    useEffect(() => {
+        console.log('현재 언어:', locale);
+    }, [locale]);
+
+    const nextLanguage = useMemo(() => (locale === 'en' ? 'ko' : 'en'), [locale]);
+
+    // 버튼 클릭시 언어 변경
+    return (
+        <button onClick={() => changeLocale(nextLanguage)}>{nextLanguage}</button>
+    );
+};
 export default App;
