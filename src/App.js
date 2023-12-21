@@ -21,7 +21,7 @@ function App() {
         [setMenu]
     );
 
-    const [locale, setLocale] = useState('en');
+    const [locale, setLocale] = useState('ja');
     const changeLocale = useCallback(
         (locale) => {
             setLocale(locale);
