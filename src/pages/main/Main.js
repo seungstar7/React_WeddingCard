@@ -14,10 +14,11 @@ const Main = () => {
 
     const nextLanguage = useMemo(() => (locale === 'ja' ? 'ko' : 'ja'), [locale]);
 
-    const btnEvent = async (e) => {
-        changeLocale(nextLanguage)
-        moment.locale(nextLanguage);
-        await i18n.changeLanguage(nextLanguage);
+    const btnEvent = async ( langType ) => {
+        changeLocale(langType)
+        moment.locale(langType);
+        console.log(langType)
+        await i18n.changeLanguage(langType);
     }
     // const navigate = useNavigate();
     const fnNavi = ( e ) => {
@@ -27,7 +28,12 @@ const Main = () => {
 
     return(
         <>
-            <button onClick={btnEvent}>{nextLanguage}</button>
+            <div style={{float :'right'}}>
+                <img src="assets/images/img/free-icon-japan-6595897.png"  onClick={()=>btnEvent("ja")} width={50}/>
+                <img src="assets/images/img/free-icon-south-korea-317314.png"  onClick={()=>btnEvent("ko")} width={50}/>
+                {/*<button value={"ja"} onClick={btnEvent}>일본</button>*/}
+                {/*<button value={"ko"} onClick={btnEvent}>한국</button>*/}
+            </div>
             <Header/>
             <Content/>
         </>

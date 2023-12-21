@@ -23,7 +23,7 @@ const Header = () => {
                     <div data-v-4de6baaa="" className="title">
                         {t('결 혼 합 니 다.')}
                     </div>
-                    <img data-v-4de6baaa="" src="./assets/images/img/main.e931123.jpg" width={'100%'} className="img"/>
+                    <img data-v-4de6baaa="" src="./assets/images/scrollIMG/KakaoTalk_20231212_155500557_09.jpg" width={'100%'} className="img"/>
                     <div data-v-4de6baaa="" className="time">2024. 04. 06. SAT AM 11:00</div>
                     <div data-v-4de6baaa="" className="location">{t('베뉴지')} B1 {t('마리아 칼라스홀')}</div>
                 </div>
