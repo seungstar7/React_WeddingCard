@@ -12,11 +12,11 @@ const Content = () => {
 
     return(
         <>
-            <Calendar/>
             <Intro/>
             <Contact/>
             <Gallery/>
             <LocationV2/>
+            <Calendar/>
             <Account/>
             {/*아래꺼는 안쓸예정*/}
             {/*<Location/>*/}
