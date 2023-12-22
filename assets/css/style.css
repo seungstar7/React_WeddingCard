@@ -316,6 +316,7 @@ html a {
     }
 }
 
+
 .vue-modal-resizer {
     overflow: hidden;
     width: 12px;
@@ -912,7 +913,7 @@ html {
 }
 
 .gallery .img-list .image[data-v-e42bfae6]:hover{
-    background: #3b8070;
+    background: #f87541;
     opacity: 0.5;
 }
 
