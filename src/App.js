@@ -28,18 +28,10 @@ function App() {
         },
         [setLocale]
     );
+
     // 콘솔에 현재 언어 출력
-
-    useEffect(()=>{
-        console.log(menu)
-    },[menu])
-    useEffect(() => {
-        console.log('현재 언어:', locale);
-    }, [locale]);
-
     useEffect(()=>{
         let userBrowserLang = navigator.language;
-        console.log(userBrowserLang)
         if(userBrowserLang=="ja"){
             let result = changeLang;
             console.log(result())
@@ -49,9 +41,7 @@ function App() {
         await i18n.changeLanguage('ja');
         return true
     }
-    // const menuDef = ( menuType ) => {
-    //     setMenu(menuType);
-    // }
+
     return (
         <>
 

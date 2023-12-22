@@ -29,7 +29,7 @@ i18n
             ja:ja
         },
         // lng: "ko", //언어 감지기를 상요하는 경우 옵션 정의 X
-        fallbackLng: "ja",
+        fallbackLng: "ko",
         detection: { // languagedetector option
             order: ['querystring', 'htmlTag', 'cookie'], // detect 우선순위
             lookupQueryString: 'lang', // ?lang=
