@@ -7,8 +7,8 @@ const Calendar = () => {
         <>
             <div data-v-21469558="" data-v-227354f0="" className="calendar">
                 <div data-v-21469558="" className="title">
-                    <div data-v-21469558="" className="year">2024　</div>
-                    <div data-v-21469558="" className="month">4{t('월')}</div>
+                    {/*<div data-v-21469558="" className="year">　</div>*/}
+                    <div data-v-21469558="" className="month">2024{t('년')} 4{t('월')}</div>
                 </div>
                 <div data-v-21469558="" className="wrap">
                     <div data-v-21469558="" className="weekday">
