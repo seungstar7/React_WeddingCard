@@ -555,6 +555,7 @@ html {
     .template-basic[data-v-227354f0] {
         max-width: 400px
     }
+
 }
 
 .template-basic.gothic[data-v-227354f0] {
@@ -1171,11 +1172,16 @@ html {
     .calendar .location[data-v-21469558] {
         margin: 20px 0
     }
+
 }
 
 @media screen and (max-width: 500px) {
     .calendar .location[data-v-21469558] {
         margin: 20px 0
+    }
+
+    .vm--modal {
+        width: 300px !important;
     }
 }
 
