@@ -11,7 +11,7 @@ const Header = () => {
             <div data-v-4de6baaa="" data-v-227354f0="" className="main">
                 <div data-v-4de6baaa="" className="header">
                     <div data-v-4de6baaa="" className="date">
-                        03/18
+                        04/06
                     </div>
                     <div data-v-4de6baaa="" className="names">
                         <div data-v-4de6baaa="">
