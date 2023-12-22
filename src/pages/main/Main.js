@@ -4,6 +4,7 @@ import Content from '@/pages/layout/Content'
 import {I18nContext} from '@/compnents/common/I18nContext'
 import moment from "moment";
 import {useTranslation} from 'react-i18next'
+import Footer from '@/pages/layout/Footer'
 // import {Navigate, useNavigate} from 'react-router'
 const Main = () => {
 
@@ -36,6 +37,7 @@ const Main = () => {
             </div>
             <Header/>
             <Content/>
+            <Footer/>
         </>
     )
 }
