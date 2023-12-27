@@ -12,7 +12,7 @@ import {useTranslation} from 'react-i18next'
 
 // import {BrowserRouter, Route, Routes} from 'react-router-dom'
 function App() {
-    const [ menu , setMenu ] = useState('main');
+    const [ menu , setMenu ] = useState('intro');
     const { t, i18n } = useTranslation(["menu"]);
     const changeMenu = useCallback(
         (menu) => {
