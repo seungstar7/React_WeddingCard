@@ -30,6 +30,7 @@ function App() {
 
 
 
+
     const [locale, setLocale] = useState('ja');
     const changeLocale = useCallback(
         (locale) => {
