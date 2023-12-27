@@ -2,12 +2,20 @@ import React, {useEffect, useState} from 'react'
 import {useTranslation} from 'react-i18next'
 
 const Gallery = () => {
+
     const { t, i18n } = useTranslation(["menu"]);
     const [ isOpen, setIsOpen ] = useState(false);
     const [ selectedImg, setSelectedImg ] = useState(0);
     const [ imgObj , setImgObj ] = useState([]);
 
     useEffect(()=>{
+        // fs.readdir("./", (err, files) => {
+        //     if (err) throw err;
+        //     files.forEach((item) => {
+        //         console.log(item);
+        //     });
+        //     console.log("readdir");
+        // });
         let tmpObj = [
              "./assets/images/img/01.a4dd1c6.jpg",
              "./assets/images/img/02.d421e78.jpg",
@@ -55,7 +63,7 @@ const Gallery = () => {
                 <div data-v-e42bfae6="" className="img-list">
                     {imgObj.map((item, idx)=>{
                         return(
-                            <img data-v-e42bfae6="" name={idx} onClick={selectedIMG} src={item} width="33%" height="120px" className="image " />
+                            <img data-v-e42bfae6="" key={idx} name={idx} onClick={selectedIMG} src={item} width="33%" height="120px" className="image " />
                         )
                     })}
                     <div data-v-e42bfae6="" style={{touchAction: 'none', userSelect: 'none'}}>
@@ -80,7 +88,7 @@ const Gallery = () => {
                                 <div className="vgs__gallery__container" style={{transform: 'translate(-600px, 0px)'}}>
                                     {imgObj.map((item, idx)=>{
                                         return(
-                                            <img src={item} alt="" className={`vgs__gallery__container__img" ${ idx==selectedImg && "vgs__gallery__container__img--active"}`}/>
+                                            <img key={idx} src={item} alt="" className={`vgs__gallery__container__img" ${ idx==selectedImg && "vgs__gallery__container__img--active"}`}/>
                                             // <img data-v-e42bfae6="" name={idx} onClick={selectedIMG} src={item} width="33%" height="120px" className="image " />
                                         )
                                     })}

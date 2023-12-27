@@ -1,20 +1,23 @@
 import React, {useEffect, useState} from 'react'
 
 const Account = () => {
-    const [modalVertical, setModalVertical ] = useState(0);
+    const [modalVertical, setModalVertical ] = useState(45);
+    const [ opacity, setOpacity ] = useState(0.5);
     const [ isOpen, setIsOpen ] = useState(false);
+    const [ ani, setAni ] = useState(false);
 
     const modalOpen = () => {
         setIsOpen(true);
-        setModalVertical(45);
+        setModalVertical(48);
+        setOpacity(0.5)
 
     }
-
     useEffect(()=>{
-        if(modalVertical<=50){
+        if(modalVertical<=50 && isOpen){
             setTimeout(()=>{
-                setModalVertical(modalVertical+1);
-            },15)
+                setModalVertical(modalVertical+0.1 );
+                setOpacity(opacity+0.03)
+            },10)
         }
     },[modalVertical])
     return(
@@ -25,7 +28,7 @@ const Account = () => {
                 </div>
                 <div data-v-72f9b44c="" className="buttons">
                     <div data-v-72f9b44c="">
-                        <div data-v-72f9b44c="" className="bank-button" onClick={()=>modalOpen()}>
+                        <div data-v-72f9b44c="" className="bank-button" onClick={()=>modalOpen("Gr")}>
                             <img data-v-72f9b44c="" src="./assets/images/img/account-groom-icon.96a3b3f.png" width="20" className="icon"/>
                             <div data-v-72f9b44c="" className="icon-title">
                                 신랑측 계좌번호
@@ -33,7 +36,7 @@ const Account = () => {
                         </div>
                     </div>
                     <div data-v-72f9b44c="">
-                        <div data-v-72f9b44c="" className="bank-button" onClick={()=>setIsOpen(true)}>
+                        <div data-v-72f9b44c="" className="bank-button" onClick={()=>modalOpen("Br")}>
                             <img data-v-72f9b44c="" src="./assets/images/img/account-bride-icon.96e5c87.png" width="20" className="icon"/>
                             <div data-v-72f9b44c="" className="icon-title">
                                 신부측 계좌번호
@@ -50,17 +53,12 @@ const Account = () => {
                              style={{width: "450px",
                                  height: "450px",
                                  zIndex: "150",
-                                 position: "absolute",
                                  top: modalVertical + "%",
                                  left: "50%",
+                                 opacity : opacity,
                                  transform: "translate(-50%, -50%)",
-                                 borderRadius: "10px",
-                                 boxShadow: "2px 2px 2px rgba(0, 0, 0, 0.25)",
-                                 backgroundColor: "white",
-                                 justifyContent: "center",
-                                 overflow: "hidden",}}>
+                                 justifyContent: "center"}}>
                             <div data-v-72f9b44c="" className="bank-modal-wrapper">
-
                                 <div data-v-72f9b44c="" className="content">
                                     <div data-v-72f9b44c="" className="title">
                                         <div data-v-72f9b44c="">신랑혼주 계좌</div>

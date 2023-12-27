@@ -9,6 +9,9 @@ import {MenuContext} from '@/compnents/common/MenuContext'
 import {I18nContext} from '@/compnents/common/I18nContext'
 import "./i18n/index"
 import {useTranslation} from 'react-i18next'
+import {remote} from '@/remote'
+
+// let imgFile  = require('../assets/images/img');
 
 // import {BrowserRouter, Route, Routes} from 'react-router-dom'
 function App() {
@@ -20,6 +23,12 @@ function App() {
         },
         [setMenu]
     );
+
+    useEffect(()=>{
+        console.log(remote())
+    },[])
+
+
 
     const [locale, setLocale] = useState('ja');
     const changeLocale = useCallback(
