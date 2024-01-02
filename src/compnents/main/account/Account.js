@@ -6,6 +6,7 @@ const Account = () => {
     const [ isOpen, setIsOpen ] = useState(false);
     const [ ani, setAni ] = useState(false);
 
+
     const modalOpen = () => {
         setIsOpen(true);
         setModalVertical(48);
