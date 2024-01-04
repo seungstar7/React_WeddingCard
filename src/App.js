@@ -27,6 +27,8 @@ function App() {
 
     useEffect(()=>{
         console.log(remote())
+
+
         console.log("상어 뱃지 주세요")
     },[])
 
