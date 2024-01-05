@@ -22,23 +22,18 @@ const ScrollComponent = ({ menuDef }) => {
     const { menu , changeMenu } = useContext(MenuContext);
 
     useEffect(()=>{
-        viewRef.current
         const today = new Date();
         const birthDate = new Date('2024-04-06');
-        console.log(today)
-        console.log(birthDate)
         const diffTime = Math.abs(today - birthDate);
         const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
         setWeddingDate(diffDays);
-        console.log(diffDays)
-        console.log(new Date())
     },[])
 
     const ZoomInVar = batch(Sticky(), Fade(), ZoomIn());
 
     const btnHandler = () => {
+        window.scrollTo({top:0})
         changeMenu('main');
-        // navigation('/main')
     }
 
     return(
@@ -46,7 +41,7 @@ const ScrollComponent = ({ menuDef }) => {
 
             <ScrollContainer>
                 {/* Page 1 */}
-                <ScrollPage>
+                <ScrollPage style={{heigh : '100%'}}>
                     <Animator animation={batch(Sticky(), Fade())}>
                         <h1 style={{textAlign:'center' }} ref={viewRef} >Wedding Day</h1>
                         <br/>
@@ -56,39 +51,39 @@ const ScrollComponent = ({ menuDef }) => {
                         {/*<div data-v-4de6baaa="" className="location">누리시아웨딩홀 6층</div>*/}
                     </Animator>
                 </ScrollPage>
-                <ScrollPage>
+                <ScrollPage style={{heigh : '100%'}}>
                     <Animator animation={ZoomInVar}>
                         <h1 style={{textAlign:'center' }}>D - {weddingDate}</h1>
                     </Animator>
                 </ScrollPage>
                 <ScrollPage/>
-                <ScrollPage>
-                    <Animator animation={batch(Sticky(), Fade(), ZoomIn(),MoveOut(1000,0))}>
+                <ScrollPage style={{heigh : '100%'}}>
+                    <Animator animation={batch(Sticky(), Fade(), ZoomIn(),MoveOut(0,0))}>
                         <img src="./assets/images/scrollIMG/KakaoTalk_20231212_155500557_05.jpg" width={'100%'} className="img"/>
                     </Animator>
                 </ScrollPage>
                 <ScrollPage/>
                 {/*Page 2*/}
-                <ScrollPage>
+                <ScrollPage style={{heigh : '100%'}}>
                     <Animator animation={batch(Sticky(), Fade(), ZoomIn(),MoveOut(-1000,0))}>
                         <img data-v-4de6baaa="" src="./assets/images/scrollIMG/KakaoTalk_20231212_155431969_09.jpg" width={'100%'} className="img"/>
                     </Animator>
                 </ScrollPage>
                 <ScrollPage/>
-                <ScrollPage>
+                <ScrollPage style={{heigh : '100%'}}>
                     <Animator animation={ZoomInVar}>
                         <img data-v-4de6baaa="" src="./assets/images/scrollIMG/KakaoTalk_20231212_155431969_12.jpg" width={'100%'} className="img"/>
                     </Animator>
                 </ScrollPage>
                 <ScrollPage/>
-                <ScrollPage>
+                <ScrollPage style={{heigh : '100%'}}>
                     <Animator animation={ZoomInVar}>
                         <img data-v-4de6baaa="" src="./assets/images/scrollIMG/KakaoTalk_20231212_155431969_14.jpg" width={'100%'} className="img"/>
                     </Animator>
                 </ScrollPage>
                 <ScrollPage/>
                 {/* Page 3*/}
-                <ScrollPage>
+                <ScrollPage style={{heigh : '100%'}}>
                     <Animator animation={StickyIn()}>
                         <Animator animation={MoveIn(0, 1000)}>
                             <h1 style={{textAlign:'center' }}>2024. 04. 06. SAT AM 11:00</h1>

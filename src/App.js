@@ -11,10 +11,6 @@ import "./i18n/index"
 import {useTranslation} from 'react-i18next'
 import {remote} from '@/remote'
 
-
-// let imgFile  = require('../assets/images/img');
-
-// import {BrowserRouter, Route, Routes} from 'react-router-dom'
 function App() {
     const [ menu , setMenu ] = useState('intro');
     const { t, i18n } = useTranslation(["menu"]);
@@ -26,15 +22,8 @@ function App() {
     );
 
     useEffect(()=>{
-        console.log(remote())
-
-
-        console.log("상어 뱃지 주세요")
+        // console.log(remote())
     },[])
-
-
-
-
 
     const [locale, setLocale] = useState('ja');
     const changeLocale = useCallback(
