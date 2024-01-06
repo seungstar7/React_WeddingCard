@@ -29,15 +29,17 @@ const Main = () => {
 
     return(
         <>
-            <div style={{float :'right'}}>
-                <img src="assets/images/img/free-icon-japan-6595897.png"  onClick={()=>btnEvent("ja")} width={50}/>
-                <img src="assets/images/img/free-icon-south-korea-317314.png"  onClick={()=>btnEvent("ko")} width={50}/>
-                {/*<button value={"ja"} onClick={btnEvent}>일본</button>*/}
-                {/*<button value={"ko"} onClick={btnEvent}>한국</button>*/}
+            <div data-v-227354f0="" className="template-basic ">
+                <div style={{float :'right'}}>
+                    <img src="assets/images/img/free-icon-japan-6595897.png"  onClick={()=>btnEvent("ja")} width={50}/>
+                    <img src="assets/images/img/free-icon-south-korea-317314.png"  onClick={()=>btnEvent("ko")} width={50}/>
+                    {/*<button value={"ja"} onClick={btnEvent}>일본</button>*/}
+                    {/*<button value={"ko"} onClick={btnEvent}>한국</button>*/}
+                </div>
+                <Header/>
+                <Content/>
+                <Footer/>
             </div>
-            <Header/>
-            <Content/>
-            <Footer/>
         </>
     )
 }

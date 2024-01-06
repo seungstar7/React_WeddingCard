@@ -1,8 +1,8 @@
 import React from "react";
 export default function ({childProps}){
     const canvas = document.querySelector('.main-container');
-    console.log(window.innerWidth)
-    console.log(canvas)
+    // console.log(window.innerWidth)
+    // console.log(canvas)
     // canvas.width = window.innerWidth;
     // canvas.height = window.innerHeight; // 캔버스 가로, 세로를 전체 화면으로 지정
     // const ctx = canvas.getContext('2d'); // 아무것도 없는 도화지 캔버스에 그리기 도구 사용을 위해 불러옴
@@ -74,9 +74,7 @@ export default function ({childProps}){
             <div id="__nuxt">
                 <div id="__layout">
                     <div className="main-container">
-                        <div data-v-227354f0="" className="template-basic ">
-                            {childProps}
-                        </div>
+                        {childProps}
                     </div>
                 </div>
             </div>
