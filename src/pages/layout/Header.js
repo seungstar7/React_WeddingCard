@@ -29,7 +29,7 @@ const Header = () => {
             {/*메인 헤더영역*/}
             <div data-v-4de6baaa="" data-v-227354f0="" className="main">
                 <div data-v-4de6baaa="" className="header">
-                    <img data-v-4de6baaa="" src="./assets/images/scrollIMG/KakaoTalk_20231212_155500557_09.jpg" width={'100%'} height={'100%'} className="img"/>
+                    <img data-v-4de6baaa="" src="./assets/images/scrollIMG/KakaoTalk_20231212_155500557_09.jpg" width={'100%'} className="img"/>
                     <div style={{float :'right'}}>
                         <img src="assets/images/img/free-icon-japan-6595897.png"  onClick={()=>btnEvent("ja")} width={50}/>
                         <img src="assets/images/img/free-icon-south-korea-317314.png"  onClick={()=>btnEvent("ko")} width={50}/>

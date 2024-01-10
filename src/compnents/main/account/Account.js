@@ -6,6 +6,11 @@ const Account = () => {
     const [ isOpen, setIsOpen ] = useState(false);
     const [ ani, setAni ] = useState(false);
 
+    function copyToClipBoard( account ) {
+        window.navigator.clipboard.writeText(account).then(() => {
+            alert("복사완료");
+        });
+    }
 
     const modalOpen = () => {
         setIsOpen(true);
@@ -25,8 +30,6 @@ const Account = () => {
         <>
             <div data-v-72f9b44c="" data-v-227354f0="" className="bank-section">
                 <div data-v-72f9b44c="" className="title"><span data-v-72f9b44c="">신랑 &amp; 신부에게 마음 전하기</span></div>
-                <div data-v-72f9b44c="" className="description"><span data-v-72f9b44c="">축복의 의미로 축의금을 전달해보세요.</span>
-                </div>
                 <div data-v-72f9b44c="" className="buttons">
                     <div data-v-72f9b44c="">
                         <div data-v-72f9b44c="" className="bank-button" onClick={()=>modalOpen("Gr")}>
@@ -63,29 +66,29 @@ const Account = () => {
                                 <div data-v-72f9b44c="" className="content">
                                     <div data-v-72f9b44c="" className="title">
                                         <div data-v-72f9b44c="">신랑혼주 계좌</div>
-                                        <div data-v-72f9b44c="" className="copy">
+                                        <div data-v-72f9b44c="" onClick={()=>copyToClipBoard("신한은행 110-394-039142")} className="copy">
                                             복사하기
                                         </div>
                                     </div>
                                     <div data-v-72f9b44c="" className="name">
-                                        <div data-v-72f9b44c="">KB국민 (예금주 : 강성택)</div>
+                                        <div data-v-72f9b44c="">신한은행 (예금주 : 신미선)</div>
                                     </div>
                                     <div data-v-72f9b44c="" className="number">
-                                        <div data-v-72f9b44c="">000000-00-00000</div>
+                                        <div data-v-72f9b44c="">110-394-039142</div>
                                     </div>
                                 </div>
                                 <div data-v-72f9b44c="" className="content">
                                     <div data-v-72f9b44c="" className="title">
                                         <div data-v-72f9b44c="">신랑 계좌</div>
-                                        <div data-v-72f9b44c="" className="copy">
+                                        <div data-v-72f9b44c="" onClick={()=>copyToClipBoard("신한은행 110-291-256291")} className="copy">
                                             복사하기
                                         </div>
                                     </div>
                                     <div data-v-72f9b44c="" className="name">
-                                        <div data-v-72f9b44c="">KB국민 (예금주 : 강도현)</div>
+                                        <div data-v-72f9b44c="">신한은행 (예금주 : 김승현)</div>
                                     </div>
                                     <div data-v-72f9b44c="" className="number">
-                                        <div data-v-72f9b44c="">000000-00-00000</div>
+                                        <div data-v-72f9b44c="">110-291-256291</div>
                                     </div>
                                 </div>
                                 <div data-v-72f9b44c="" onClick={()=>setIsOpen(false)} className="close-button"><span data-v-72f9b44c="">닫기</span></div>
