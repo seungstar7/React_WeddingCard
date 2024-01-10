@@ -12,7 +12,7 @@ import {useTranslation} from 'react-i18next'
 import {remote} from '@/remote'
 
 function App() {
-    const [ menu , setMenu ] = useState('intro');
+    const [ menu , setMenu ] = useState('main');
     const { t, i18n } = useTranslation(["menu"]);
     const changeMenu = useCallback(
         (menu) => {
@@ -35,8 +35,9 @@ function App() {
 
     // 콘솔에 현재 언어 출력
     useEffect(()=>{
-        let userBrowserLang = navigator.language;
-        if(userBrowserLang=="ja"){
+        //let userBrowserLang = navigator.language;
+        let userBrowserLang = "ja";
+        if(userBrowserLang==="ja"){
             let result = changeLang;
             console.log(result())
         }
@@ -53,7 +54,7 @@ function App() {
 
         <MenuContext.Provider value={{menu, changeMenu}}>
             <I18nContext.Provider value={{ locale, changeLocale }}>
-            <Layout childProps={menu == 'intro' ? <Intro/> : <Main/>}/>
+            <Layout childProps={menu === 'intro' ? <Intro/> : <Main/>}/>
                 {/*<LanguageButton />*/}
             </I18nContext.Provider>
         </MenuContext.Provider>
@@ -64,6 +65,7 @@ function App() {
             {/*    </Routes>*/}
             {/*</BrowserRouter>*/}
             {/*<ScrollComponent/>*/}
+
             {/*<main/>*/}
         </>
     );
@@ -72,6 +74,7 @@ function App() {
 const LanguageButton = () => {
     // useContext를 사용하여 I18nContext의 값을 가져옴
     const { locale, changeLocale } = useContext(I18nContext);
+    //rgb(223, 178, 161);
 
     // 콘솔에 현재 언어 출력
     useEffect(() => {
