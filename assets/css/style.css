@@ -54,10 +54,7 @@
 /*    src: url(/_nuxt/fonts/JejuMyeongjoOTF.e944cd8.otf) format("opentype")*/
 /*}*/
 
-body, html {
-    margin: 0;
-    height: 100%
-}
+
 
 html body {
     font-family: "Nanum Myeongjo", serif;
@@ -501,17 +498,6 @@ html a {
     background-color: red
 }
 
-html {
-    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 16px;
-    word-spacing: 1px;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    box-sizing: border-box
-}
-
 *, :after, :before {
     box-sizing: border-box;
     margin: 0
@@ -568,7 +554,7 @@ html {
 
 .main[data-v-4de6baaa] {
     text-align: center;
-    color: var(--emphasize);
+    color: #B39488;
     font-size: 20px;
     font-weight: 600
 }
@@ -589,7 +575,7 @@ html {
 }
 
 .main .date[data-v-4de6baaa] {
-    font-size: 15px;
+    font-size: 40px;
     padding-top: 16%;
     margin-bottom: 6%
 }
@@ -648,7 +634,7 @@ html {
 }
 
 .main .location[data-v-4de6baaa] {
-    font-size: 15px;
+    font-size: 20px;
     padding-bottom: 20%
 }
 
@@ -690,13 +676,13 @@ html {
 }
 
 .message .text .title[data-v-2795477a] {
-    color: var(--emphasize);
+    color: #B39488;
     margin-bottom: 40px
 }
 
 .message .text .content[data-v-2795477a] {
     color: var(--text-message);
-    font-size: 15px;
+    font-size: 20px;
     line-height: 2
 }
 
@@ -708,7 +694,7 @@ html {
 
 .contacts[data-v-4752b0dc] {
     text-align: center;
-    color: var(--emphasize);
+    color: #B39488;
     font-size: 20px;
     font-weight: 600;
     padding-bottom: 40px
@@ -825,7 +811,7 @@ html {
     width: 100%;
     padding: 10px;
     margin-top: 20px;
-    background-color: var(--emphasize);
+    background-color: #B39488;
     color: var(--text-light);
     border-radius: 10px;
     text-align: center;
@@ -841,7 +827,7 @@ html {
     border-bottom: 1px solid;
     font-size: 13px;
     font-weight: 900;
-    color: var(--emphasize-darker)
+    color: #B39488
 }
 
 .parent[data-v-39c2c16b] {
@@ -884,7 +870,7 @@ html {
     width: 100%;
     padding: 10px;
     margin-top: 20px;
-    background-color: var(--emphasize);
+    background-color: #B39488;
     color: var(--text-light);
     border-radius: 10px;
     text-align: center;
@@ -899,7 +885,7 @@ html {
 .gallery .title[data-v-e42bfae6] {
     text-align: center;
     padding: 40px;
-    color: var(--emphasize);
+    color: #B39488;
     font-size: 18px;
     font-weight: 600
 }
@@ -924,7 +910,7 @@ html {
 }
 
 .story .title[data-v-65bbcfaa] {
-    color: var(--emphasize);
+    color: #B39488;
     margin-bottom: 30px
 }
 
@@ -977,7 +963,7 @@ html {
 }
 
 .story-modal-component .story-page .content .scroll-section .title[data-v-da75774a] {
-    color: var(--emphasize);
+    color: #B39488;
     margin-top: 60px;
     margin-bottom: 40px;
     font-size: 20px;
@@ -1085,7 +1071,7 @@ html {
     position: relative;
     transform: rotate(45deg);
     margin-top: 6px;
-    background: var(--emphasize);
+    background: #B39488;
     border-radius: 0
 }
 
@@ -1094,7 +1080,7 @@ html {
     width: 25px;
     height: 25px;
     position: absolute;
-    background: var(--emphasize);
+    background: #B39488;
     border-radius: 50%
 }
 
@@ -1147,7 +1133,7 @@ html {
     display: block;
     width: 50px;
     margin: 5px auto auto;
-    color: var(--emphasize)
+    color: #B39488
 }
 
 @media screen and (min-width: 768px) {
@@ -1236,7 +1222,7 @@ html {
 .map .title[data-v-f68ce4e0] {
     padding-top: 10px;
     padding-bottom: 40px;
-    color: var(--emphasize);
+    color: #B39488;
     font-size: 18px;
     font-weight: 600;
     text-align: center
@@ -1310,13 +1296,13 @@ html {
     border-top: 1px solid #e4e4e4;
     text-align: center;
     padding: 20px 20px 40px;
-    font-size: 18px
+    font-size: 20px
 }
 
 .bank-section .title[data-v-72f9b44c] {
     padding-top: 10px;
     padding-bottom: 10px;
-    color: var(--emphasize);
+    color: #B39488;
     font-size: 20px;
     font-weight: 600;
     text-align: center
@@ -1967,13 +1953,13 @@ html {
 
 .thankyou .title[data-v-433bd9d5] {
     padding: 70px 20px 0;
-    color: var(--emphasize);
+    color: #B39488;
     font-size: 18px;
     font-weight: 600
 }
 
 .thankyou .title > span[data-v-433bd9d5] {
-    border: 1px solid var(--emphasize);
+    border: 1px solid #B39488;
     padding: 10px 40px
 }
 
@@ -1991,12 +1977,12 @@ html {
 .thankyou .sincerely[data-v-433bd9d5] {
     padding: 30px 30px 50px;
     font-size: 14px;
-    color: var(--emphasize)
+    color: #B39488
 }
 
 .thankyou .wedding[data-v-433bd9d5] {
     padding: 20px;
-    color: var(--emphasize);
+    color: #B39488;
     font-size: 18px
 }
 
@@ -2072,9 +2058,9 @@ html {
 
 .international-contact-wrapper .content .vendor .vendor-buttons .vendor-button[data-v-1a66bcc0] {
     padding: 10px;
-    border: 1px solid var(--emphasize);
+    border: 1px solid #B39488;
     background-color: var(--text-light);
-    color: var(--emphasize);
+    color: #B39488;
     border-radius: 10px;
     text-align: center;
     cursor: pointer;
@@ -2082,7 +2068,7 @@ html {
 }
 .main[data-v-6a4481fa] {
                           text-align: center;
-                          color: var(--emphasize);
+                          color: #B39488;
                           font-size: 20px;
                           font-weight: 600;
                           display: block
@@ -2107,7 +2093,7 @@ html {
 .main .date .slash[data-v-6a4481fa] {
     height: 1px;
     width: 67px;
-    background: var(--emphasize);
+    background: #B39488;
     position: absolute;
     top: 15px;
     left: 7px;
@@ -2144,7 +2130,7 @@ html {
 }
 .main[data-v-a79540d2] {
                           text-align: center;
-                          color: var(--emphasize);
+                          color: #B39488;
                           font-size: 20px;
                           font-weight: 600;
                           display: block
@@ -2182,7 +2168,7 @@ html {
 
 .main .border[data-v-a79540d2] {
     margin: auto;
-    border-top: 1px solid var(--emphasize)
+    border-top: 1px solid #B39488
 }
 
 .main .date[data-v-a79540d2] {
@@ -2198,7 +2184,7 @@ html {
 .main .date .slash[data-v-a79540d2] {
     height: 1px;
     width: 67px;
-    background: var(--emphasize);
+    background: #B39488;
     position: absolute;
     top: 15px;
     left: 7px;
