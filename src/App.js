@@ -35,8 +35,8 @@ function App() {
 
     // 콘솔에 현재 언어 출력
     useEffect(()=>{
-        //let userBrowserLang = navigator.language;
-        let userBrowserLang = "ja";
+        let userBrowserLang = navigator.language;
+        //let userBrowserLang = "ja";
         if(userBrowserLang==="ja"){
             let result = changeLang;
             console.log(result())

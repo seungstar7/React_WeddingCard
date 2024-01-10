@@ -125,12 +125,12 @@ const LocationV2 = () => {
                                         </div>
                                         <div>
                                             <a
-                                                href="https://www.kakaocorp.com/main"
+                                                href="https://map.kakao.com/?urlX=464506.0&urlY=1127991.0&name=%EC%84%9C%EC%9A%B8+%EA%B0%95%EC%84%9C%EA%B5%AC+%EA%B0%95%EC%84%9C%EB%A1%9C+388"
                                                 target="_blank"
                                                 className="link"
                                                 rel="noreferrer"
                                             >
-                                                홈페이지
+                                                지도이동
                                             </a>
                                         </div>
                                     </div>
