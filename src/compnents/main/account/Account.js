@@ -1,5 +1,6 @@
-import React, {useEffect, useState} from 'react'
+import React, {useContext, useEffect, useState} from 'react'
 import KakaoShare from "@/compnents/main/account/KakaoShare";
+import {I18nContext} from "@/compnents/common/I18nContext";
 
 const Account = () => {
     const [modalVertical, setModalVertical ] = useState(45);
@@ -9,10 +10,9 @@ const Account = () => {
 
     function copyToClipBoard( account ) {
         window.navigator.clipboard.writeText(account).then(() => {
-            alert("복사완료");
+            alert("복사 완료");
         });
     }
-
     const modalOpen = ( target ) => {
         setModalState({isOpen: true, target: target});
         setModalVertical(48);
@@ -134,7 +134,6 @@ const Account = () => {
                 <div data-v-760883fe="" className="buttons">
                     <div data-v-760883fe="" className="button">
                         <img data-v-760883fe="" src="./assets/images/img/kakao_talk_icon_black.49f2b15.png" height="17px" className="icon"/>
-                        <div data-v-760883fe="">카카오톡으로 공유하기</div>
                         <KakaoShare/>
                     </div>
                     <div data-v-760883fe="" className="button">

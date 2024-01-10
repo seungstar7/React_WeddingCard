@@ -13,76 +13,42 @@ export default function KakaoShare() {
                 kakao.init('40c51a6ccfbf2ef6f1c6f9576606daea')
             }
 
-            kakao.Share.createDefaultButton({
+            Kakao.Share.createDefaultButton({
                 container: '#kakaotalk-sharing-btn',
-                objectType: 'feed',
+                objectType: 'location',
+                address: '서울 강서구 강서로 388',
+                addressTitle: '더 베뉴지 서울',
                 content: {
-                    title: '오늘의 디저트',
-                    description: '아메리카노, 빵, 케익',
+                    title: '김승현 ♥︎ 후쿠다리코',
+                    description: '승현과 리코의 결혼이 n일 남았어요! \n 모두 축하해 주세요',
                     imageUrl:
-                        'https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
+                        'https://seungstar7.github.io/React_WeddingCard/assets/images/scrollIMG/KakaoTalk_20231212_155500557_09.jpg',
                     link: {
-                        mobileWebUrl: 'https://developers.kakao.com',
-                        webUrl: 'https://developers.kakao.com',
+                        mobileWebUrl: 'https://seungstar7.github.io/React_WeddingCard',
+                        webUrl: 'https://seungstar7.github.io/React_WeddingCard',
                     },
                 },
-                itemContent: {
-                    profileText: 'Kakao',
-                    profileImageUrl: 'https://mud-kage.kakao.com/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-                    titleImageUrl: 'https://mud-kage.kakao.com/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-                    titleImageText: 'Cheese cake',
-                    titleImageCategory: 'Cake',
-                    items: [
-                        {
-                            item: 'Cake1',
-                            itemOp: '1000원',
-                        },
-                        {
-                            item: 'Cake2',
-                            itemOp: '2000원',
-                        },
-                        {
-                            item: 'Cake3',
-                            itemOp: '3000원',
-                        },
-                        {
-                            item: 'Cake4',
-                            itemOp: '4000원',
-                        },
-                        {
-                            item: 'Cake5',
-                            itemOp: '5000원',
-                        },
-                    ],
-                    sum: 'Total',
-                    sumOp: '15000원',
-                },
                 social: {
-                    likeCount: 10,
-                    commentCount: 20,
-                    sharedCount: 30,
+                    likeCount: 286,
+                    commentCount: 45,
+                    sharedCount: 845,
                 },
                 buttons: [
                     {
-                        title: '웹으로 이동',
+                        title: '웹으로 보기',
                         link: {
-                            mobileWebUrl: 'https://developers.kakao.com',
-                            webUrl: 'https://developers.kakao.com',
-                        },
-                    },
-                    {
-                        title: '앱으로 이동',
-                        link: {
-                            mobileWebUrl: 'https://developers.kakao.com',
-                            webUrl: 'https://developers.kakao.com',
+                            mobileWebUrl: 'https://seungstar7.github.io/React_WeddingCard',
+                            webUrl: 'https://seungstar7.github.io/React_WeddingCard',
                         },
                     },
                 ],
             });
         }
     }
+    // <button onClick={kakaoButton} id='kakaotalk-sharing-btn'>KakaoShare</button>
 
     return (
-        <button onClick={kakaoButton} id='kakaotalk-sharing-btn'>KakaoShare</button>
+        <div data-v-760883fe="" onClick={kakaoButton} id='kakaotalk-sharing-btn'>카카오톡으로 공유하기</div>
+
     )
 }
