@@ -18,8 +18,8 @@ const Content = () => {
             <Contact/>
             <Gallery/>
             <LocationV2/>
-            <Calendar/>
-            {locale==='ko' && <Account/>}
+            <Calendar/> <Account/>
+            {/*{locale==='ko' &&  <Account/>}*/}
             {/*아래꺼는 안쓸예정*/}
             {/*<Location/>*/}
             {/*<Insa/>*/}
