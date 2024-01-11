@@ -3,9 +3,9 @@ import axios from "axios";
 
 const Comment = () => {
 
-    // axios.get("http://localhost:14402/api/weddingCard").then((res)=>{
-    //     console.log(res)
-    // })
+    axios.get("http://localhost:14402/api/weddingCard").then((res)=>{
+        console.log(res)
+    })
 
     axios.get("http://112.157.208.34:14402/api/weddingCard").then((res)=>{
         console.log(res)
