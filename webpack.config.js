@@ -40,7 +40,8 @@ module.exports = (env) => {
             },
             proxy: {
                 // '/api': 'http://dev2.ntd.co.kr/'
-                // '/api': 'http://localhost:8080/'
+                '/api': 'http://localhost:3000/',
+                changeOrigin: true, // cross origin 허용 설정
             },
             historyApiFallback: true, // router-dom 옵션
         },

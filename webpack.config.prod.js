@@ -44,7 +44,12 @@ module.exports = (env) => {
             port: 3000,
             contentBase: './dist',
             historyApiFallback: true,
-            open: true
+            open: true,
+            proxy: {
+                // '/api': 'http://dev2.ntd.co.kr/'
+                '/api': 'http://localhost:3000/',
+                changeOrigin: true, // cross origin 허용 설정
+            },
         },
         resolve: {
             alias: {
