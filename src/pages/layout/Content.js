@@ -9,8 +9,12 @@ import LocationV2 from '@/compnents/main/location/LocationV2'
 import Account from '@/compnents/main/account/Account'
 import {I18nContext} from "@/compnents/common/I18nContext";
 import Comment from "@/compnents/main/comment/Comment";
+import axios from "axios";
 
 const Content = () => {
+    axios.get("http://192.168.219.108:14402/api/weddingCard").then((res)=>{
+        console.log(res)
+    })
     const { locale, changeLocale } = useContext(I18nContext);
 
     return(
