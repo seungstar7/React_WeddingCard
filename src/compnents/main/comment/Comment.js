@@ -7,12 +7,12 @@ const Comment = () => {
         console.log(res)
     })
 
-    axios.get("http://112.157.208.34:14402/api/weddingCard").then((res)=>{
-        console.log(res)
-    })
-    // fetch("http://localhost:14402/api/weddingCard", { headers }).then((res)=>{
+    // axios.get("http://112.157.208.34:14402/api/weddingCard").then((res)=>{
     //     console.log(res)
     // })
+    fetch("http://112.157.208.34:14402/api/weddingCard").then((res)=>{
+        console.log(res)
+    })
 
     return(
         <>

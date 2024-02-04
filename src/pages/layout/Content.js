@@ -16,14 +16,14 @@ const Content = () => {
 
     return(
         <>
-            <Comment/>
-            {/*<Intro/>*/}
-            {/*<Contact/>*/}
-            {/*<Gallery/>*/}
-            {/*<LocationV2/>*/}
-            {/*<Calendar/> */}
-            {/*<Account/>*/}
-            {/*{locale==='ko' &&  <Account/>}*/}
+            {/*<Comment/>*/}
+            <Intro/>
+            <Contact/>
+            <Gallery/>
+            <LocationV2/>
+            <Calendar/>
+            <Account/>
+            {locale==='ko' &&  <Account/>}
             {/*아래꺼는 안쓸예정*/}
             {/*<Location/>*/}
             {/*<Insa/>*/}
