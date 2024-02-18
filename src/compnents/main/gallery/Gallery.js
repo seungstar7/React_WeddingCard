@@ -17,16 +17,43 @@ const Gallery = () => {
         //     console.log("readdir");
         // });
         let tmpObj = [
-             "./assets/images/img/01.a4dd1c6.jpg",
-             "./assets/images/img/02.d421e78.jpg",
-             "./assets/images/img/03.a1fe75f.jpg",
-             "./assets/images/img/04.a99c408.jpg",
-             "./assets/images/img/05.580e1ac.jpg",
-             "./assets/images/img/06.a591391.jpg",
-             "./assets/images/img/07.9d0c8e8.jpg",
-             "./assets/images/img/08.78d2df9.jpg",
-             "./assets/images/img/09.b20e21a.jpg",
+            // "./assets/images/fixedIMG/03_MKH00452_2.jpg",
+            // "./assets/images/fixedIMG/13_MKH00518-2.jpg",
+            // "./assets/images/fixedIMG/34_MKH01663-2.jpg",
+            // "./assets/images/fixedIMG/09_MKH00095-2.jpg",
+            // "./assets/images/fixedIMG/08_MKH00123-2.jpg",
+            "./assets/images/fixedIMG/MKH00019.jpg",
+            "./assets/images/fixedIMG/MKH00170.jpg",
+            "./assets/images/fixedIMG/MKH00193.jpg",
+            "./assets/images/fixedIMG/MKH00282.jpg",
+            "./assets/images/fixedIMG/MKH00344.jpg",
+            "./assets/images/fixedIMG/MKH00387.jpg",
+            "./assets/images/fixedIMG/MKH00420.jpg",
+            "./assets/images/fixedIMG/MKH00451.jpg",
+            "./assets/images/fixedIMG/MKH00513.jpg",
+            // "./assets/images/fixedIMG/MKH00520.jpg",
+            // "./assets/images/fixedIMG/MKH00556.jpg",
+            // "./assets/images/fixedIMG/MKH00609.jpg",
+            // "./assets/images/fixedIMG/MKH00662.jpg",
+            // "./assets/images/fixedIMG/MKH00820.jpg",
+            // "./assets/images/fixedIMG/MKH00865.jpg",
+            // "./assets/images/fixedIMG/MKH00912.jpg",
+            // "./assets/images/fixedIMG/MKH00932.jpg",
+            // "./assets/images/fixedIMG/MKH00964.jpg",
+            // "./assets/images/fixedIMG/MKH001103.jpg",
+            // "./assets/images/fixedIMG/MKH001132.jpg",
+            // "./assets/images/fixedIMG/MKH001176.jpg",
+            // "./assets/images/fixedIMG/MKH001183.jpg",
+            // "./assets/images/fixedIMG/MKH001306.jpg",
+            // "./assets/images/fixedIMG/MKH001409.jpg",
+            // "./assets/images/fixedIMG/MKH001578.jpg",
+            // "./assets/images/fixedIMG/MKH001644.jpg",
+            // "./assets/images/fixedIMG/MKH001663.jpg",
+
         ]
+
+
+
         setImgObj(tmpObj);
     },[])
 
@@ -68,33 +95,33 @@ const Gallery = () => {
                     })}
                     <div data-v-e42bfae6="" style={{touchAction: 'none', userSelect: 'none'}}>
                         {isOpen &&
-                        <div data-v-e42bfae6="" className="vgs">
-                            <button type="button" className="vgs__close" onClick={closePop}>
-                                ×
-                            </button>
-                            <button type="button" onClick={()=>prevNextBtn('prev')} className="vgs__prev">
-                                ‹
-                            </button>
-                            <div className="vgs__container">
-                                <img src={imgObj[selectedImg]} alt="" className="vgs__container__img"/>
-                            </div>
-                            <button type="button" onClick={()=>prevNextBtn('next')} className="vgs__next">
-                                ›
-                            </button>
-                            <div className="vgs__gallery">
-                                <div className="vgs__gallery__title">
-                                    6 / 9
+                            <div data-v-e42bfae6="" className="vgs">
+                                <button type="button" className="vgs__close" onClick={closePop}>
+                                    ×
+                                </button>
+                                <button type="button" onClick={()=>prevNextBtn('prev')} className="vgs__prev">
+                                    ‹
+                                </button>
+                                <div className="vgs__container">
+                                    <img src={imgObj[selectedImg]} alt="" className="vgs__container__img"/>
                                 </div>
-                                <div className="vgs__gallery__container" style={{transform: 'translate(-600px, 0px)'}}>
-                                    {imgObj.map((item, idx)=>{
-                                        return(
-                                            <img key={idx} src={item} alt="" className={`vgs__gallery__container__img" ${ idx==selectedImg && "vgs__gallery__container__img--active"}`}/>
-                                            // <img data-v-e42bfae6="" name={idx} onClick={selectedIMG} src={item} width="33%" height="120px" className="image " />
-                                        )
-                                    })}
+                                <button type="button" onClick={()=>prevNextBtn('next')} className="vgs__next">
+                                    ›
+                                </button>
+                                <div className="vgs__gallery">
+                                    <div className="vgs__gallery__title">
+                                        6 / 9
+                                    </div>
+                                    <div className="vgs__gallery__container" style={{transform: 'translate(-600px, 0px)'}}>
+                                        {imgObj.map((item, idx)=>{
+                                            return(
+                                                <img key={idx} src={item} alt="" className={`vgs__gallery__container__img" ${ idx==selectedImg && "vgs__gallery__container__img--active"}`}/>
+                                                // <img data-v-e42bfae6="" name={idx} onClick={selectedIMG} src={item} width="33%" height="120px" className="image " />
+                                            )
+                                        })}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         }
                     </div>
                 </div>

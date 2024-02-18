@@ -12,7 +12,7 @@ import {useTranslation} from 'react-i18next'
 import {remote} from '@/remote'
 
 function App() {
-    const [ menu , setMenu ] = useState('intr');
+    const [ menu , setMenu ] = useState('intro');
     const { t, i18n } = useTranslation(["menu"]);
     const changeMenu = useCallback(
         (menu) => {

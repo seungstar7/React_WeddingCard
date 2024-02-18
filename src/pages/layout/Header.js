@@ -28,16 +28,16 @@ const Header = () => {
         <>
             {/*메인 헤더영역*/}
             <div data-v-4de6baaa="" data-v-227354f0="" className="main">
+                <img src="assets/images/img/free-icon-japan-6595897.png"  onClick={()=>btnEvent("ja")} width={50}/>
+                <img src="assets/images/img/free-icon-south-korea-317314.png"  onClick={()=>btnEvent("ko")} width={50}/>
                 <div data-v-4de6baaa="" className="header">
-                    <img data-v-4de6baaa="" src="./assets/images/scrollIMG/KakaoTalk_20231212_155500557_09.jpg" width={'100%'} className="img"/>
+                    <img data-v-4de6baaa="" src="./assets/images/fixedIMG/36_MKH01571_3.jpg" width={'90%'}  className="img"/>
                     <div style={{float :'right'}}>
-                        <img src="assets/images/img/free-icon-japan-6595897.png"  onClick={()=>btnEvent("ja")} width={50}/>
-                        <img src="assets/images/img/free-icon-south-korea-317314.png"  onClick={()=>btnEvent("ko")} width={50}/>
                         {/*<button value={"ja"} onClick={btnEvent}>일본</button>*/}
                         {/*<button value={"ko"} onClick={btnEvent}>한국</button>*/}
                     </div>
                     <div data-v-4de6baaa="" className="date">
-                        04/06
+
                     </div>
                     <div data-v-4de6baaa="" className="names">
                         <div data-v-4de6baaa="">
