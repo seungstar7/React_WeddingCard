@@ -57,28 +57,33 @@ const ScrollComponent = ({ menuDef }) => {
                     </Animator>
                 </ScrollPage>
                 <ScrollPage/>
+                {/*"./assets/images/fixedIMG/main/jpeg-optimizer_03_MKH00452_2.jpg",*/}
+                {/*"./assets/images/fixedIMG/main/jpeg-optimizer_13_MKH00518-2.jpg",*/}
+                {/*"./assets/images/fixedIMG/main/jpeg-optimizer_34_MKH01663-2.jpg",*/}
+                {/*"./assets/images/fixedIMG/main/jpeg-optimizer_08_MKH00123-2.jpg",*/}
+                {/*"./assets/images/fixedIMG/main/jpeg-optimizer_09_MKH00095-2.jpg",*/}
                 <ScrollPage style={{heigh : '100%'}}>
                     <Animator animation={batch(Sticky(), Fade(), ZoomIn(),MoveOut(0,0))}>
-                        <img src="./assets/images/scrollIMG/KakaoTalk_20231212_155500557_05.jpg" width={'100%'} className="img"/>
+                        <img src="./assets/images/fixedIMG/main/jpeg-optimizer_03_MKH00452_2.jpg" width={'100%'} className="img"/>
                     </Animator>
                 </ScrollPage>
                 <ScrollPage/>
                 {/*Page 2*/}
                 <ScrollPage style={{heigh : '100%'}}>
                     <Animator animation={batch(Sticky(), Fade(), ZoomIn(),MoveOut(-1000,0))}>
-                        <img data-v-4de6baaa="" src="./assets/images/scrollIMG/KakaoTalk_20231212_155431969_09.jpg" width={'100%'} className="img"/>
+                        <img data-v-4de6baaa="" src="./assets/images/fixedIMG/main/jpeg-optimizer_13_MKH00518-2.jpg" width={'100%'} className="img"/>
                     </Animator>
                 </ScrollPage>
                 <ScrollPage/>
                 <ScrollPage style={{heigh : '100%'}}>
                     <Animator animation={ZoomInVar}>
-                        <img data-v-4de6baaa="" src="./assets/images/scrollIMG/KakaoTalk_20231212_155431969_12.jpg" width={'100%'} className="img"/>
+                        <img data-v-4de6baaa="" src="./assets/images/fixedIMG/main/jpeg-optimizer_34_MKH01663-2.jpg" width={'100%'} className="img"/>
                     </Animator>
                 </ScrollPage>
                 <ScrollPage/>
                 <ScrollPage style={{heigh : '100%'}}>
                     <Animator animation={ZoomInVar}>
-                        <img data-v-4de6baaa="" src="./assets/images/scrollIMG/KakaoTalk_20231212_155431969_14.jpg" width={'100%'} className="img"/>
+                        <img data-v-4de6baaa="" src="./assets/images/fixedIMG/main/jpeg-optimizer_36_MKH01571_2.jpg" width={'100%'} className="img"/>
                     </Animator>
                 </ScrollPage>
                 <ScrollPage/>

@@ -1,35 +1,25 @@
-import React, {Component, useContext, useMemo, useState, useTransition} from 'react'
+import React, {Component, useCallback, useContext, useMemo, useState, useTransition} from 'react'
 import {useTranslation} from 'react-i18next'
 import {I18nContext} from "@/compnents/common/I18nContext";
 import moment from "moment/moment";
+import {Animator, batch, Fade, ScrollContainer, ScrollPage, Sticky} from "react-scroll-motion";
 
 const Header = () => {
 
     const [ testBtn, setTestBtn ] = useState(1);
-    const { locale, changeLocale } = useContext(I18nContext);
+    // const { locale, changeLocale } = useContext(I18nContext);
     const { t, i18n } = useTranslation(["menu"]);
     const [isPending, startTransition] = useTransition();
 
-    const nextLanguage = useMemo(() => (locale === 'ja' ? 'ko' : 'ja'), [locale]);
 
-    const btnEvent = async ( langType ) => {
-        changeLocale(langType)
-        moment.locale(langType);
-        console.log(langType)
-        await i18n.changeLanguage(langType);
-    }
-    // const navigate = useNavigate();
-    const fnNavi = ( e ) => {
-        // navigate(`/${e.target.name}` )
 
-    }
+
     return(
 
         <>
             {/*메인 헤더영역*/}
             <div data-v-4de6baaa="" data-v-227354f0="" className="main">
-                <img src="assets/images/img/free-icon-japan-6595897.png"  onClick={()=>btnEvent("ja")} width={50}/>
-                <img src="assets/images/img/free-icon-south-korea-317314.png"  onClick={()=>btnEvent("ko")} width={50}/>
+
                 <div data-v-4de6baaa="" className="header">
                     <img data-v-4de6baaa="" src="./assets/images/fixedIMG/main/jpeg-optimizer_36_MKH01571_2.jpg" width={'90%'}  className="img"/>
                     <div style={{float :'right'}}>
