@@ -18,6 +18,8 @@ export default function KakaoShare() {
         if (window.Kakao) {
             const kakao = window.Kakao
 
+            const msg = `승현과 리코의 결혼이 ${weddingDate}일 남았어요! \n함께 가는 길 축복 해 주신다면 \n    저희 부부 \n행복한 나날만을 약속드립니다`
+
             if (!kakao.isInitialized()) {
                 kakao.init('40c51a6ccfbf2ef6f1c6f9576606daea')
             }
@@ -29,8 +31,7 @@ export default function KakaoShare() {
                 addressTitle: '더 베뉴지 서울',
                 content: {
                     title: '승현 ♥︎ 리코',
-                    description: `승현과 리코의 결혼이 ${weddingDate}일 남았어요! 
- 모두 축하해 주세요`,
+                    description: msg,
                     imageUrl:
                         'https://seungstar7.github.io/React_WeddingCard/assets/images/fixedIMG/main/MKH00608.jpg',
                     link: {
