@@ -120,7 +120,7 @@ const ScrollComponent = ({ menuDef }) => {
 
                                         onClick={btnHandler}>
                                     <span>🎉</span>
-                                    <span>축하히기</span>
+                                    <span>Celebrate</span>
                                 </button>
                                 {/*<button*/}
                                 {/*    className={"custom-btn btn-11"}*/}
