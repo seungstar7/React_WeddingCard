@@ -110,7 +110,7 @@ const LocationV2 = () => {
                                 <div className="body">
                                     <div className="img">
                                         <img
-                                            src="//t1.daumcdn.net/thumb/C84x76/?fname=http://t1.daumcdn.net/cfile/2170353A51B82DE005"
+                                            src="https://search.pstatic.net/common/?autoRotate=true&type=w560_sharpen&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221012_68%2F1665558759511ajATT_JPEG%2FKakaoTalk_20221012_155837857_14.jpg"
                                             width="73"
                                             height="70"
                                             alt="카카오 스페이스닷원"
@@ -118,10 +118,10 @@ const LocationV2 = () => {
                                     </div>
                                     <div className="desc">
                                         <div className="ellipsis">
-                                            제주특별자치도 제주시 첨단로 242
+                                            서울 강서구 강서로 388
                                         </div>
                                         <div className="jibun ellipsis">
-                                            (우) 63309 (지번) 영평동 2181
+                                            (우) 07583 (지번) 등촌동 678-14
                                         </div>
                                         <div>
                                             <a
