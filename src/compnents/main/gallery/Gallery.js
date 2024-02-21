@@ -34,7 +34,7 @@ const Gallery = () => {
             "./assets/images/fixedIMG/jpeg-optimizer_MKH00344.jpeg",
             "./assets/images/fixedIMG/jpeg-optimizer_MKH00387.jpeg",
             "./assets/images/fixedIMG/jpeg-optimizer_MKH00420.jpeg",
-            "./assets/images/fixedIMG/jpeg-optimizer_MKH00451.jpeg",
+            //"./assets/images/fixedIMG/jpeg-optimizer_MKH00451.jpeg",
             "./assets/images/fixedIMG/jpeg-optimizer_MKH00513.jpg",
             "./assets/images/fixedIMG/jpeg-optimizer_MKH00556.jpeg",
             "./assets/images/fixedIMG/jpeg-optimizer_MKH00609.jpeg",
