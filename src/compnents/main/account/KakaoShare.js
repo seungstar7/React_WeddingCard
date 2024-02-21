@@ -1,6 +1,15 @@
-import React, { useEffect } from 'react'
+import React, {useEffect, useState} from 'react'
 
 export default function KakaoShare() {
+
+    const [ weddingDate, setWeddingDate ] = useState(0);
+    useEffect(()=>{
+        const today = new Date();
+        const birthDate = new Date('2024-04-06');
+        const diffTime = Math.abs(today - birthDate);
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        setWeddingDate(diffDays);
+    },[])
     useEffect(() => {
         kakaoButton()
     }, [])
@@ -19,10 +28,11 @@ export default function KakaoShare() {
                 address: '서울 강서구 강서로 388',
                 addressTitle: '더 베뉴지 서울',
                 content: {
-                    title: '김승현 ♥︎ 후쿠다리코',
-                    description: '승현과 리코의 결혼이 n일 남았어요! \n 모두 축하해 주세요',
+                    title: '승현 ♥︎ 리코',
+                    description: `승현과 리코의 결혼이 ${weddingDate}일 남았어요! 
+ 모두 축하해 주세요`,
                     imageUrl:
-                        'https://seungstar7.github.io/React_WeddingCard/assets/images/scrollIMG/KakaoTalk_20231212_155500557_09.jpg',
+                        'https://seungstar7.github.io/React_WeddingCard/assets/images/fixedIMG/main/MKH00608.jpg',
                     link: {
                         mobileWebUrl: 'https://seungstar7.github.io/React_WeddingCard',
                         webUrl: 'https://seungstar7.github.io/React_WeddingCard',

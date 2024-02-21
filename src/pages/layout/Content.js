@@ -22,7 +22,7 @@ const Content = () => {
             <Gallery/>
             <LocationV2/>
             <Calendar/>
-            <Account/>
+            {/*<Account/>*/}
             {locale==='ko' &&  <Account/>}
             {/*아래꺼는 안쓸예정*/}
             {/*<Location/>*/}
