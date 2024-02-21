@@ -114,11 +114,14 @@ const ScrollComponent = ({ menuDef }) => {
                             <h1 style={{textAlign:'center' }}>베뉴지웨딩홀 B1 마리아 칼라스홀</h1>
                         </Animator>
                         <Animator animation={MoveIn(1000, 0)}>
-                            <button className="button" onClick={btnHandler}>
-                                <span>🎉</span>
-                                <span>축하히기</span>
-                            </button>
-                            <div style={{ marginTop: '2rem'}} className="button-list">
+
+                            <div style={{  display: 'flex', justifyContent: 'center', marginTop:'3rem'}}>
+                                <button className="button"
+
+                                        onClick={btnHandler}>
+                                    <span>🎉</span>
+                                    <span>축하히기</span>
+                                </button>
                                 {/*<button*/}
                                 {/*    className={"custom-btn btn-11"}*/}
                                 {/*    style={{*/}

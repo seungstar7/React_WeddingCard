@@ -30,13 +30,13 @@ const Account = () => {
     return(
         <>
             <div data-v-72f9b44c="" data-v-227354f0="" className="bank-section">
-                <div data-v-72f9b44c="" className="title"><span data-v-72f9b44c="">신랑 &amp; 신부에게 마음 전하기</span></div>
+                <div data-v-72f9b44c="" className="title"><span data-v-72f9b44c="">마음 전하기</span></div>
                 <div data-v-72f9b44c="" className="buttons">
                     <div data-v-72f9b44c="">
                         <div data-v-72f9b44c="" className="bank-button" onClick={()=>modalOpen("Gr")}>
                             <img data-v-72f9b44c="" src="./assets/images/img/account-groom-icon.96a3b3f.png" width="20" className="icon"/>
                             <div data-v-72f9b44c="" className="icon-title">
-                                신랑측 계좌번호
+                                신랑 계좌번호
                             </div>
                         </div>
                     </div>
@@ -44,7 +44,7 @@ const Account = () => {
                         <div data-v-72f9b44c="" className="bank-button" onClick={()=>modalOpen("Br")}>
                             <img data-v-72f9b44c="" src="./assets/images/img/account-bride-icon.96e5c87.png" width="20" className="icon"/>
                             <div data-v-72f9b44c="" className="icon-title">
-                                신부측 계좌번호
+                                신부 계좌번호
                             </div>
                         </div>
                     </div>
