@@ -1,4 +1,7 @@
 import React, {useContext, useEffect, useMemo, useRef, useState} from 'react'
+import { TConductorInstance } from "react-canvas-confetti";
+import Fireworks from "react-canvas-confetti/dist/presets/fireworks";
+
 import {
     Animator,
     batch,
@@ -16,6 +19,10 @@ import {I18nContext} from '@/compnents/common/I18nContext'
 // import {useNavigate} from 'react-router'
 
 const ScrollComponent = ({ menuDef }) => {
+    const [conductor, setConductor] = useState(TConductorInstance);
+    const onInit = ({ conductor }) => {
+        setConductor(conductor);
+    };
     // const navigation = useNavigate();
     const [ weddingDate, setWeddingDate ] = useState(0);
     const viewRef = useRef();
@@ -32,13 +39,18 @@ const ScrollComponent = ({ menuDef }) => {
     const ZoomInVar = batch(Sticky(), Fade(), ZoomIn());
 
     const btnHandler = () => {
-        window.scrollTo({top:0})
-        changeMenu('main');
+        conductor?.shoot();
+
+        setTimeout(()=>{
+            window.scrollTo({top:0})
+            changeMenu('main');
+        },1000)
     }
 
     return(
         <>
 
+            <Fireworks onInit={onInit} />
             <ScrollContainer>
                 {/* Page 1 */}
                 <ScrollPage style={{heigh : '100%'}}>
@@ -102,17 +114,22 @@ const ScrollComponent = ({ menuDef }) => {
                             <h1 style={{textAlign:'center' }}>베뉴지웨딩홀 B1 마리아 칼라스홀</h1>
                         </Animator>
                         <Animator animation={MoveIn(1000, 0)}>
+                            <button className="button" onClick={btnHandler}>
+                                <span>🎉</span>
+                                <span>축하히기</span>
+                            </button>
                             <div style={{ marginTop: '2rem'}} className="button-list">
-                                <button
-                                    className={"custom-btn btn-11"}
-                                    style={{
-                                        width:'auto',
-                                        height:'3rem',
-                                        margin:'auto',
-                                        display:'block'
-                                }} onClick={btnHandler}>
-                                    show detail
-                                </button>
+                                {/*<button*/}
+                                {/*    className={"custom-btn btn-11"}*/}
+                                {/*    style={{*/}
+                                {/*        width:'auto',*/}
+                                {/*        height:'3rem',*/}
+                                {/*        margin:'auto',*/}
+                                {/*        display:'block'*/}
+                                {/*}} onClick={btnHandler}>*/}
+                                {/*    show detail*/}
+                                {/*</button>*/}
+
                             </div>
                         </Animator>
                     </Animator>

@@ -34,14 +34,24 @@ const Main = () => {
                     {/* Page 1 */}
                     <ScrollPage>
                         <Animator animation={batch(Sticky(), Fade())}>
-                            <img src="assets/images/img/free-icon-japan-6595897.png"  onClick={()=>btnEvent("ja")} width={50}/>
-                            <img src="assets/images/img/free-icon-south-korea-317314.png"  onClick={()=>btnEvent("ko")} width={50}/>
+                            <div data-v-f68ce4e0="" data-v-227354f0="" className="map" style={{background:"white"}}>
+                            <div data-v-f68ce4e0="" className="title" style={{fontSize:'1.3rem'}}>
+                                L a n g u a g e
+                            </div>
+                                <img src="assets/images/img/free-icon-japan-6595897.png"  onClick={()=>btnEvent("ja")} width={75}/>
+                                <img src="assets/images/img/free-icon-south-korea-317314.png"  onClick={()=>btnEvent("ko")} width={70} style={{    position: 'relative',
+                                    marginLeft: '2px',
+                                    marginBottom: '2px'}}/>
+                            </div>
+
+
                             {/*<img data-v-4de6baaa="" src="/assets/images/img/main.e931123.jpg" width={'100%'} className="img"/>*/}
                             {/*<main/>*/}
                             {/*<div data-v-4de6baaa="" className="time">2028. 03. 18. SAT PM 1:00</div>*/}
                             {/*<div data-v-4de6baaa="" className="location">누리시아웨딩홀 6층</div>*/}
                         </Animator>
                     </ScrollPage>
+                    <ScrollPage/>
                     <Header/>
                     <Content/>
                     <Footer/>
