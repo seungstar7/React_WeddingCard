@@ -42,7 +42,6 @@ const Main = () => {
                             {/*<div data-v-4de6baaa="" className="location">누리시아웨딩홀 6층</div>*/}
                         </Animator>
                     </ScrollPage>
-                    <ScrollPage/>
                     <Header/>
                     <Content/>
                     <Footer/>

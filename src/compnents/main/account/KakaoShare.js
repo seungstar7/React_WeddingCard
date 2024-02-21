@@ -2,14 +2,7 @@ import React, {useEffect, useState} from 'react'
 
 export default function KakaoShare() {
 
-    const [ weddingDate, setWeddingDate ] = useState(0);
-    useEffect(()=>{
-        const today = new Date();
-        const birthDate = new Date('2024-04-06');
-        const diffTime = Math.abs(today - birthDate);
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        setWeddingDate(diffDays);
-    },[])
+
     useEffect(() => {
         kakaoButton()
     }, [])
@@ -18,7 +11,7 @@ export default function KakaoShare() {
         if (window.Kakao) {
             const kakao = window.Kakao
 
-            const msg = `승현과 리코의 결혼이 ${weddingDate}일 남았어요! \n함께 가는 길 축복 해 주신다면 \n    저희 부부 \n행복한 나날만을 약속드립니다`
+            const msg = `승현과 리코의 결혼이 ${Math.ceil(Math.abs(new Date() - new Date('2024-04-06')) / (1000 * 60 * 60 * 24))}일 남았어요! \n함께 가는 길축복 해 주신다면 \n저희 부부 \n행복한 나날만을 약속드립니다`
 
             if (!kakao.isInitialized()) {
                 kakao.init('40c51a6ccfbf2ef6f1c6f9576606daea')
@@ -33,7 +26,7 @@ export default function KakaoShare() {
                     title: '승현 ♥︎ 리코',
                     description: msg,
                     imageUrl:
-                        'https://seungstar7.github.io/React_WeddingCard/assets/images/fixedIMG/main/MKH00608.jpg',
+                        'https://seungstar7.github.io/React_WeddingCard/assets/images/scrollIMG/KakaoTalk_20231212_155500557_09.jpg',
                     link: {
                         mobileWebUrl: 'https://seungstar7.github.io/React_WeddingCard',
                         webUrl: 'https://seungstar7.github.io/React_WeddingCard',
