@@ -141,14 +141,27 @@ const LocationV2 = () => {
                     </CustomOverlayMap>
                 )}
             </Map>
-            <button
-                onClick={() => {
-                    setMapTypeId(kakao.maps.MapTypeId.TRAFFIC)
-                }}
-            >
-                {t("교통정보")} {t("보기")}
+            <div style={{  display: 'flex',
+                justifyContent: 'center'}}>
+                <button className={'custom-btn btn-9'}
+                        style={{marginRight:'8px'}}
+                        onClick={() => {
+                            setMapTypeId(kakao.maps.MapTypeId.TRAFFIC)
+                        }}
+                >
+                    {t("교통정보")}
 
-            </button>
+                </button>
+                <button
+                    className={'custom-btn btn-9'}
+                    style={{marginLeft:'8px'}}
+                    onClick={() => {setRoadViewIsOpen(!roadViewIsOpen);setMapTypeId(roadViewIsOpen ? null : kakao.maps.MapTypeId.ROADVIEW );}}
+                >
+                    {t("로드뷰")}
+                    {!roadViewIsOpen ? t("보기") : t("닫기")}
+                </button>
+            </div>
+
             {/*<button*/}
             {/*    onClick={() => {*/}
             {/*        setMapTypeId(kakao.maps.MapTypeId.ROADVIEW)*/}
@@ -163,12 +176,7 @@ const LocationV2 = () => {
             {/*>*/}
             {/*    새로고침*/}
             {/*</button>*/}
-            <button
-                onClick={() => {setRoadViewIsOpen(!roadViewIsOpen);setMapTypeId(roadViewIsOpen ? null : kakao.maps.MapTypeId.ROADVIEW );}}
-            >
-                {t("로드뷰")}
-                {!roadViewIsOpen ? t("보기") : t("닫기")}
-            </button>
+
         </div>
     )
 }
