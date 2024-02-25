@@ -34,7 +34,7 @@ const Main = () => {
                     {/* Page 1 */}
                     <ScrollPage>
                         <Animator animation={batch(Sticky(), Fade())}>
-                            <div data-v-f68ce4e0="" data-v-227354f0="" className="map" style={{background:"white"}}>
+                            <div data-v-f68ce4e0="" data-v-227354f0="" className="map" style={{alignContent : 'center', background:"white",width:'200px'}}>
                             <div data-v-f68ce4e0="" className="title" style={{fontSize:'1.3rem'}}>
                                 L a n g u a g e
                             </div>
