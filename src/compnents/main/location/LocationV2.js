@@ -149,7 +149,7 @@ const LocationV2 = () => {
                             setMapTypeId(kakao.maps.MapTypeId.TRAFFIC)
                         }}
                 >
-                    {t("교통정보")}
+                    {t("교통정보")} {t("보기")}
 
                 </button>
                 <button

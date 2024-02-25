@@ -67,13 +67,13 @@ const Gallery = () => {
     const prevNextBtn = ( type ) => {
         if(type==='prev'){
             if(selectedImg==0){
-                window.alert("뒤로 갈  수 없습니다");
+                setSelectedImg(imgObj.length-1)
                 return;
             }
             setSelectedImg(selectedImg-1);
         }else if(type==='next'){
             if(!imgObj[selectedImg+1]){
-                window.alert("앞으로 갈  수 없습니다");
+                setSelectedImg(0)
                 return;
             }
             setSelectedImg(selectedImg+1);

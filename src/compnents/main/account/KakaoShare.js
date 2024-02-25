@@ -11,7 +11,7 @@ export default function KakaoShare() {
         if (window.Kakao) {
             const kakao = window.Kakao
 
-            const msg = `승현과 리코의 결혼이 ${Math.ceil(Math.abs(new Date() - new Date('2024-04-06')) / (1000 * 60 * 60 * 24))}일 남았어요! \n함께 가는 길축복 해 주신다면 \n저희 부부 \n행복한 나날만을 약속드립니다`
+            const msg = `승현과 리코의 결혼이 ${Math.ceil(Math.abs(new Date() - new Date('2024-04-06')) / (1000 * 60 * 60 * 24))}일 남았어요! \n2024.04.06(토) 베뉴지 웨딩홀 마리아 칼라스홀`
 
             if (!kakao.isInitialized()) {
                 kakao.init('40c51a6ccfbf2ef6f1c6f9576606daea')
