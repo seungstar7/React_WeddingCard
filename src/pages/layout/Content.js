@@ -23,7 +23,7 @@ const Content = () => {
             <LocationV2/>
             <Calendar/>
             {/*<Account/>*/}
-            {locale==='ko' &&  <Account/>}
+            <Account/>
             {/*아래꺼는 안쓸예정*/}
             {/*<Location/>*/}
             {/*<Insa/>*/}
