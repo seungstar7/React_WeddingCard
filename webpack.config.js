@@ -32,7 +32,7 @@ module.exports = (env) => {
         },
         devServer: {
             host: 'localhost',
-            port: 3000,
+            port: 3100,
             historyApiFallback: true,
             open: true,
             static: {
